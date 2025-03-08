@@ -9,6 +9,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .navbar ul {
@@ -21,6 +22,8 @@
     text-decoration: none;
     display: flex;
     color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 #logo-img {
@@ -49,15 +52,37 @@ button{
     background: transparent;
 }
 
-#main-img{
-    width: 450px;
-}
-
-.container{
+main{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    position: relative;
+}
+
+main #main-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#main-text{
+    position: absolute;
+    color: white;
+    font-size: 2rem;
+}
+
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1.2fr 0.8fr;
+    grid-template-areas: 
+        "sidebar main main main"
+        "sidebar content1 content2 content3"
+        "sidebar strip strip strip";
+    grid-gap: 0.2rem;
+    text-align: center;
+    margin: 10px;
 }
 
 .card {
@@ -67,12 +92,67 @@ button{
     border-radius: 6px;
 }
 
-#grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
-    justify-items: center; /* Centers grid items horizontally */
-    align-items: start; /* Optional: Align items to the top if needed */
-    width: 100%; /* Ensure the grid takes up the full width */
+main {
+    grid-area: main;
+    background-color: red;
 }
 
+#sidebar {
+    grid-area: sidebar;
+    background-color: blue;
+}
 
+#content1{
+    background-color: aquamarine;
+    grid-area: content1;
+}
+
+#content2{
+    background-color: bisque;
+    grid-area: content2;
+}
+
+#content3{
+    background-color: aliceblue;
+    grid-area: content3;
+}
+
+#strip{
+    background-color: darkgreen;
+    grid-area: strip;
+}
+
+footer{
+    background-color: black;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer a{
+    color: rgb(124, 9, 255);
+    text-decoration: none;
+}
+
+#footer-contacts{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+@media only screen and (max-width: 550px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas: 
+            "sidebar"
+            "main"
+            "content1"
+            "content2"
+            "content3"
+            "strip"
+    }
+
+}
