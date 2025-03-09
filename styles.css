@@ -43,7 +43,7 @@ button{
     background: #f6f6f6;
 }
 
-.search-input {
+#search-input {
     font-size: 16px;
     color: #333333;
     margin-left: 14px;
@@ -67,8 +67,9 @@ main #main-img{
 
 #main-text{
     position: absolute;
-    color: white;
+    word-wrap: break-word;
     font-size: 2rem;
+    color: white;
 }
 
 .container{
@@ -147,11 +148,11 @@ footer a{
         grid-template-columns: 1fr;
         grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
         grid-template-areas: 
-            "sidebar"
             "main"
             "content1"
             "content2"
             "content3"
+            "strip"
             "strip"
     }
 
