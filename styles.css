@@ -158,3 +158,40 @@ footer a{
 
 }
 
+#results-container{
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    align-items: center;
+}
+
+#results{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 550px;
+    justify-content: center;
+}
+
+#results-img{
+    height: auto;
+}
+
+#results-card{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    max-width: 150px;
+    height: 150px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+#results-title {
+    margin: 5px;
+    font-weight: bold;
+}
+
+#results-rating {
+    font-size: 7px;
+    margin-left: 5px;
+}
