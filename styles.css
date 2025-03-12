@@ -1,6 +1,8 @@
 html, body{
     height: 100%;
     overflow-x: hidden;
+    margin: 0;
+    width: 100%;
 }
 
 body{
@@ -99,7 +101,7 @@ main #main-img{
 
 .container{
     display: grid;
-    height: 100vh;
+    height: auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1.5fr 1.2fr 0.8fr;
     grid-template-areas: 
@@ -109,8 +111,6 @@ main #main-img{
     grid-gap: 0.2rem;
     text-align: center;
     margin: 10px;
-    flex: 1;
-    overflow: hidden
 }
 
 .card {
@@ -132,10 +132,10 @@ main {
 
 #content1{
     grid-area: content1;
+    width: 100%;
 }
 
 #content2{
-    background-color: bisque;
     grid-area: content2;
 }
 
@@ -156,8 +156,7 @@ footer{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    position: sticky
-    margi
+    position: sticky;
 }
 
 footer a{
@@ -173,14 +172,14 @@ footer a{
 
 @media only screen and (max-width: 550px){
     .container{
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-columns: 1fr 0fr;
         grid-template-areas: 
             "main"
             "content1"
             "content2"
             "content3"
-            "strip"
+            "strip";
+            margin-right: 0px;
     }
     #sidebar img{
         display: none;
@@ -259,6 +258,12 @@ footer a{
 }
 
 #content2 img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+#content3 img{
     height: 100%;
     width: 100%;
     object-fit: cover;
