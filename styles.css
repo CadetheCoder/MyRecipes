@@ -1,3 +1,13 @@
+html, body{
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    display: block;
+    overflow-y: auto;
+}
+
 *{
     margin: 0px;
     padding: 0px;
@@ -54,9 +64,9 @@ button{
 
 main{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    cursor: pointer;
     position: relative;
+    width: 100%;
 }
 
 main #main-img{
@@ -65,11 +75,26 @@ main #main-img{
     object-fit: cover;
 }
 
-#main-text{
+#main-img-text{
     position: absolute;
     word-wrap: break-word;
-    font-size: 2rem;
+    font-size: 6vw;
     color: white;
+    padding: 2vw; 
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+#main-btn{
+    position: absolute;
+    top: 20%;
+    left: 4%;
+    border: none;
+    border-radius: 2px;
+    padding: 1vw;
+    font-size: 2vw;
+    background-color: rgb(255, 115, 0);
+    color: white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 .container{
@@ -84,6 +109,8 @@ main #main-img{
     grid-gap: 0.2rem;
     text-align: center;
     margin: 10px;
+    flex: 1;
+    overflow: hidden
 }
 
 .card {
@@ -104,7 +131,6 @@ main {
 }
 
 #content1{
-    background-color: aquamarine;
     grid-area: content1;
 }
 
@@ -130,6 +156,8 @@ footer{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: sticky
+    margi
 }
 
 footer a{
@@ -153,9 +181,13 @@ footer a{
             "content2"
             "content3"
             "strip"
-            "strip"
     }
-
+    #sidebar img{
+        display: none;
+    }
+    #main-btn{
+        top: 15%;
+    }
 }
 
 #results-container{
@@ -194,4 +226,40 @@ footer a{
 #results-rating {
     font-size: 7px;
     margin-left: 5px;
+}
+
+#sidebar img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#content1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+#content1 h1{
+    font-size: 3vw;
+    color: white;
+    align-items: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    position: absolute;
+}
+
+#content1{
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }

@@ -52,7 +52,7 @@ const displayResults = (recipes, resultsDiv) => {
             <img src="${recipe.image}" alt=${recipe.title} id="results-img">
             <div id="results-text-container">
             <p id="results-title">${recipe.title}</p>
-            <p id="results-rating">1,736 ratings</p>
+            <p id="results-rating">⭐⭐⭐⭐⭐ 1,736 ratings</p>
             </div>
             </div>`; 
         
@@ -81,5 +81,22 @@ const fetchRecipeDetails = (id) => {
     })
     .catch(error => console.error("Error fetching recipe details:", error));
 }
+
+// Main page html 
+document.addEventListener("DOMContentLoaded", () => {
+
+    const main = document.getElementById("main");
+    main.addEventListener("click", () => {
+        window.location.href = "http://127.0.0.1:5501/search-results.html?query=chicken%20wings";
+    });
+
+    const content1 = document.getElementById("content1");
+    content1.addEventListener("click", () => {
+        
+    })
+
+});
+
+
 
 
