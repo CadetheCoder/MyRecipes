@@ -88,7 +88,7 @@ main #main-img{
 
 #main-btn{
     position: absolute;
-    top: 20%;
+    top: 21%;
     left: 4%;
     border: none;
     border-radius: 2px;
@@ -103,11 +103,12 @@ main #main-img{
     display: grid;
     height: auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1.5fr 1.2fr 0.8fr;
+    grid-template-rows: 325px 100px 200px 0.8fr;
     grid-template-areas: 
-        "sidebar main main main"
-        "sidebar content1 content2 content3"
-        "sidebar strip strip strip";
+        "main main main main"
+        "content-header content-header content-header content-header"
+        "content1 content2 content3 content4"
+        "strip strip strip strip";
     grid-gap: 0.2rem;
     text-align: center;
     margin: 10px;
@@ -118,6 +119,13 @@ main #main-img{
     height: 100px;
     border: 1px solid black;
     border-radius: 6px;
+}
+
+#content-header{
+    grid-area: content-header;
+    display: flex;
+    font-size: 4vw;
+    align-items: center;
 }
 
 main {
@@ -142,6 +150,10 @@ main {
 #content3{
     background-color: aliceblue;
     grid-area: content3;
+}
+
+#content4{
+    grid-area: content4;
 }
 
 #strip{
@@ -171,23 +183,35 @@ footer a{
 }
 
 @media only screen and (max-width: 550px){
-    .container{
-        grid-template-columns: 1fr 0fr;
-        grid-template-areas: 
-            "main"
-            "content1"
-            "content2"
-            "content3"
-            "strip";
-            margin-right: 0px;
-    }
-    #sidebar img{
-        display: none;
-    }
+
     #main-btn{
         top: 15%;
     }
+
+    .container{
+        display: grid;
+        height: auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 200px 50px 1.2fr 0.8fr;
+        grid-template-areas: 
+            "main main main main"
+            "content-header content-header content-header content-header"
+            "content1 content2 content3 content4"
+            "strip strip strip strip";
+        grid-gap: 0.2rem;
+        text-align: center;
+        margin: 10px;
+    }
+
+    #content-header{
+        grid-area: content-header;
+        display: flex;
+        font-size: 3vw;
+        align-items: center;
+    }
+
 }
+
 
 #results-container{
     display: flex;
@@ -248,15 +272,6 @@ footer a{
     position: absolute;
 }
 
-#content1{
-    cursor: pointer;
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 #content2 img{
     width: 100%;
     object-fit: cover;
@@ -264,6 +279,18 @@ footer a{
 }
 
 #content3 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#content4 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#strip img{
     height: 100%;
     width: 100%;
     object-fit: cover;
