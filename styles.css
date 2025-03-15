@@ -1,16 +1,13 @@
 /* Everything Selectors */
 html, body{
     height: 100%;
-    overflow-x: hidden;
     margin: 0;
     width: 100%;
     display: block;
-    overflow-y: auto;
 }
 
 body{
     display: block;
-    overflow-y: auto;
 }
 
 *{
@@ -38,7 +35,7 @@ button{
     grid-template-rows: 100px 325px 100px 200px 100px 200px;
     grid-template-areas: 
         "main-header main-header main-header main-header"
-        "main main main main"
+        "main main main-caption main-caption"
         "content-header content-header content-header content-header"
         "content1 content2 content3 content4"
         "strip-header strip-header strip-header strip-header"
@@ -49,6 +46,10 @@ button{
     justify-content: center;
 }
 /* End of Container */
+
+#main-caption{
+    grid-area: main-caption;
+}
 
 /* Search Bar */
 .search-container{
