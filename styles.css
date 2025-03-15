@@ -156,12 +156,27 @@ main #main-img{
 
 #content1{
     grid-area: content1;
-    width: 100%;
     cursor: pointer;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
-#content1:hover{
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+#content1 p{
+    position: absolute;
+    display: none;
+    color: white;
+    font-weight: bold;
+}
+
+#content1:hover p{
+    display: block;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7)
+}
+
+#content1:hover img{
+    filter: blur(1px);
 }
 
 #content1 img{
@@ -173,6 +188,27 @@ main #main-img{
 
 #content2{
     grid-area: content2;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+#content2 p{
+    position: absolute;
+    display: none;
+    color: white;
+    font-weight: bold;
+}
+
+#content2:hover p{
+    display: block;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7)
+}
+
+#content2:hover img{
+    filter: blur(1px);
 }
 
 #content2 img{
@@ -182,8 +218,28 @@ main #main-img{
 }
 
 #content3{
-    background-color: aliceblue;
     grid-area: content3;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+#content3 p{
+    position: absolute;
+    display: none;
+    color: white;
+    font-weight: bold;
+}
+
+#content3:hover p{
+    display: block;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7)
+}
+
+#content3:hover img{
+    filter: blur(1px);
 }
 
 #content3 img{
@@ -194,6 +250,26 @@ main #main-img{
 
 #content4{
     grid-area: content4;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+#content4 p{
+    position: absolute;
+    display: none;
+    color: white;
+    font-weight: bold;
+}
+
+#content4:hover p{
+    display: block;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7)
+}
+
+#content4:hover img{
+    filter: blur(1px);
 }
 
 #content4 img{
@@ -225,6 +301,56 @@ main #main-img{
     object-fit: cover;
 }
 /* End of Strip */
+
+/* Start of Desserts */
+#dessert1{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#dessert2{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#dessert3{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#dessert1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#dessert2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#dessert3 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.dessert p{
+    margin: 5px;
+    font-weight: bold;
+}
+
+.dessert{
+    cursor: pointer;
+}
+/* End of Desserts */
 
 /* Start of Footer */
 footer{
@@ -372,185 +498,3 @@ footer a{
     }
 
 }
-
-/* Mobile (up to 480px) */
-@media (max-width: 480px) {
-
-    /* Start Of Recipes Page */
-    #recipe-details{
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        align-items: center;
-        width: 100%;
-    }
-    
-    #recipe-details-title{
-        margin: 20px;
-    }
-    
-    #ingredients-title{
-        margin: 20px;
-    }
-    
-    #ingredients-list{
-        text-align: left;
-        margin: 20px;
-        font-size: 10px;
-    }
-    
-    #instructions-title{
-        margin: 20px
-    }
-    
-    #instructions{
-        font-size: 10px;
-        margin: 20px;
-        text-align: left;
-        line-height: 30px;
-        font-weight: 300;
-    }
-    /* End Of Recipes Page */
- }
-
-/* Tablet (portrait and small screens) */
-@media (max-width: 768px) {
-
-        /* Start Of Recipes Page */
-        #recipe-details{
-            display: flex;
-            flex-direction: column;
-        }
-        
-        #recipe-details-title{
-            margin: 20px;
-            width: 100%;
-            text-align: left;
-            margin-right: 0px;
-            border-bottom: 1px solid rgb(255, 119, 0);
-        }
-        
-        #ingredients-title{
-            margin: 20px;
-            width: 100%;
-            text-align: left;
-            margin-right: 0px;
-            border-top: 1px solid rgb(255, 119, 0);
-        }
-        
-        #ingredients-list{
-            text-align: left;
-            margin: 20px;
-            font-size: 10px;
-        }
-        
-        #instructions-title{
-            margin: 20px;
-            width: 100%;
-            text-align: left;
-            margin-right: 0px;
-            border-top: 1px solid rgb(255, 119, 0);
-        }
-        
-        #instructions{
-            font-size: 10px;
-            margin: 20px;
-            text-align: left;
-            line-height: 30px;
-            font-weight: 300;
-        }
-        /* End Of Recipes Page */
-
- }
-
-/* Tablets & small desktops */
-@media (max-width: 1024px) {
-
-        /* Start Of Recipes Page */
-        #recipe-details{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
-        
-        #recipe-details-title{
-            margin: 20px;
-        }
-        
-        #ingredients-title{
-            margin: 20px;
-        }
-        
-        #ingredients-list{
-            text-align: left;
-            margin: 20px;
-            font-size: 10px;
-        }
-        
-        #instructions-title{
-            margin: 20px
-        }
-        
-        #instructions{
-            font-size: 10px;
-            margin: 20px;
-            text-align: left;
-            line-height: 30px;
-            font-weight: 300;
-        }
-        /* End Of Recipes Page */
-
- }
-
-/* Large desktops */
-@media (min-width: 1200px) { }
-
-/* End of Media Queries */
-
-/* Start of Desserts */
-#dessert1{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-#dessert2{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-#dessert3{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-#dessert1 img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-#dessert2 img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-#dessert3 img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-.dessert p{
-    margin: 5px;
-    font-weight: bold;
-}
-/* End of Desserts */
