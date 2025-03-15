@@ -22,6 +22,11 @@ body{
 button{
     cursor: pointer;
 }
+
+#no-recipe{
+    height: 100vh;
+    margin: 50px;
+}
 /* End of Everything Selectors */
 
 /* Container */
@@ -30,8 +35,9 @@ button{
     display: grid;
     height: auto;
     grid-template-columns: 1 1fr 1fr 1fr;
-    grid-template-rows: 325px 100px 200px 100px 275px;
+    grid-template-rows: 100px 325px 100px 200px 100px 200px;
     grid-template-areas: 
+        "main-header main-header main-header main-header"
         "main main main main"
         "content-header content-header content-header content-header"
         "content1 content2 content3 content4"
@@ -129,6 +135,14 @@ main #main-img{
     color: white;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
+
+#main-header{
+    grid-area: main-header;
+    display: flex;
+    font-size: 4vw;
+    align-items: center;
+}
+
 /* End of Main */
 
 /* Start of Content */
@@ -143,6 +157,11 @@ main #main-img{
 #content1{
     grid-area: content1;
     width: 100%;
+    cursor: pointer;
+}
+
+#content1:hover{
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 #content1 img{
@@ -192,14 +211,12 @@ main #main-img{
     align-items: center;
 }
 
-#sidebar {
-    grid-area: sidebar;
-    background-color: blue;
-}
-
 #strip{
-    background-color: darkgreen;
     grid-area: strip;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: top;
+    flex-wrap: wrap;
 }
 
 #strip img{
@@ -246,6 +263,7 @@ footer a{
     flex-wrap: wrap;
     max-width: 550px;
     justify-content: center;
+    height: 120vh
 }
 
 #results-img{
@@ -324,8 +342,9 @@ footer a{
         display: grid;
         height: auto;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 200px 50px 1.2fr 50px 0.8fr;
+        grid-template-rows: 50px 200px 50px 1.2fr 50px 0.8fr;
         grid-template-areas: 
+            "main-header main-header main-header main-header"
             "main main main main"
             "content-header content-header content-header content-header"
             "content1 content2 content3 content4"
@@ -345,6 +364,10 @@ footer a{
     }
 
     #strip-header{
+        font-size: 3vw;
+    }
+
+    #main-header{
         font-size: 3vw;
     }
 
@@ -450,7 +473,6 @@ footer a{
             justify-content: center;
             align-items: center;
             width: 100%;
-            text-align: center;
         }
         
         #recipe-details-title{
@@ -487,3 +509,48 @@ footer a{
 
 /* End of Media Queries */
 
+/* Start of Desserts */
+#dessert1{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#dessert2{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#dessert3{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#dessert1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#dessert2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#dessert3 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.dessert p{
+    margin: 5px;
+    font-weight: bold;
+}
+/* End of Desserts */

@@ -40,7 +40,7 @@ const fetchRecipes = (query) => {
 const displayResults = (recipes, resultsDiv) => {
     resultsDiv.innerHTML = "";
     if (!recipes || recipes.length === 0) {
-        resultsDiv.innerHTML = "<p>No recipes found</p>";
+        resultsDiv.innerHTML = `<p id="no-recipe">No recipes found :(</p>`;
         return;
     }
 
@@ -92,10 +92,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const content1 = document.getElementById("content1");
     content1.addEventListener("click", () => {
-
+        window.location.href = "http://127.0.0.1:5501/search-results.html?query=pasta";
     })
 
-});
+})
 
 
 
