@@ -71,12 +71,12 @@ const fetchRecipeDetails = (id) => {
     .then(response => response.json())
     .then(recipe => {
         detailsDiv.innerHTML = `
-            <h2>${recipe.title}</h2>
+            <h2 id="recipe-details-title">${recipe.title}</h2>
             <img src="${recipe.image}" alt="${recipe.title}" width="300" style="border-radius: 8px;">
-            <h3>Ingredients:</h3>
-            <ul>${recipe.extendedIngredients.map(ing => `<li>${ing.original}</li>`).join("")}</ul>
-            <h3>Instructions:</h3>
-            <p>${recipe.instructions || "No instructions provided."}</p>
+            <h3 id="ingredients-title">Ingredients:</h3>
+            <ul>${recipe.extendedIngredients.map(ing => `<li id="ingredients-list">${ing.original}</li>`).join("")}</ul>
+            <h3 id="instructions-title">Instructions:</h3>
+            <h3 id="instructions">${recipe.instructions || "No instructions provided."}</h3>
         `;
     })
     .catch(error => console.error("Error fetching recipe details:", error));
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const content1 = document.getElementById("content1");
     content1.addEventListener("click", () => {
-        
+
     })
 
 });
