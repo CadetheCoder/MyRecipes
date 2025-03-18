@@ -33,6 +33,10 @@ section{
 .wings{
     cursor: pointer;
 }
+
+.contents-container{
+    display: contents;
+}
 /* End of Everything Selectors */
 
 /* Search Bar */
@@ -206,13 +210,6 @@ section{
     align-items: center;
 }
 
-#content1 p{
-    position: absolute;
-    display: none;
-    color: white;
-    font-weight: bold;
-}
-
 #content1:hover p{
     display: block;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7)
@@ -236,13 +233,6 @@ section{
     position: relative;
     justify-content: center;
     align-items: center;
-}
-
-#content2 p{
-    position: absolute;
-    display: none;
-    color: white;
-    font-weight: bold;
 }
 
 #content2:hover p{
@@ -269,13 +259,6 @@ section{
     align-items: center;
 }
 
-#content3 p{
-    position: absolute;
-    display: none;
-    color: white;
-    font-weight: bold;
-}
-
 #content3:hover p{
     display: block;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7)
@@ -299,13 +282,6 @@ section{
     align-items: center;
 }
 
-#content4 p{
-    position: absolute;
-    display: none;
-    color: white;
-    font-weight: bold;
-}
-
 #content4:hover p{
     display: block;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
@@ -319,6 +295,18 @@ section{
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+.content{
+    display: block;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.content-text{
+    position: absolute;
+    display: none;
+    color: white;
+    font-weight: bold;
 }
 /* End of Craving Content */
 
@@ -556,17 +544,20 @@ footer a{
         align-items: center;
         
     }
+
     #strip{
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 50px;
+        flex-wrap: wrap;
     }
+    
     .dessert{
-        width: 100px;
-        height: 100px;
+        width: 30vw;
+        height: 30vw;
     }
+
     footer{
         background-color: black;
         padding: 10px;
@@ -588,6 +579,7 @@ footer a{
         flex-wrap: wrap;
         gap: 10px;
     }
+
     footer p{
         font-size: 10px;
     }
@@ -599,11 +591,6 @@ footer a{
         align-items: center;
     }
 
-    .content{
-        width: 40vw;
-        height: 40vw;
-    }
-
     .section-header{
         width: 100%;
         text-align: center;
@@ -611,12 +598,12 @@ footer a{
     }
 
     .wing-box{
-        width: 40vw;
+        width: 100%;
         height: 40vw;
     }
 
     #wing-review-box1{
-        text-align: left;
+        text-align: center;
         display: flex;
         flex-direction: column;
         font-size: 4vw;
@@ -627,14 +614,37 @@ footer a{
         display: flex;
         flex-direction: column;
         font-size: 4vw;
+        text-align: center;
     }
-
 
     .hero-overlay{
         position: absolute;
         text-align: center;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     
+    .hero-box{
+        width: 100%;
+    }
+
+    .hero img{
+        width: 100%;
+    }
+    
+    .contents-container{
+        display: flex;
+    }
+
+    .content{
+        width: 100%;
+        height: 60vw;
+        font-size: 5vw;
+    }
+
+    .hero-overlay button{
+        max-width: 100px;
+    }
   }
