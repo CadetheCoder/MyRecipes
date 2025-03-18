@@ -23,43 +23,17 @@ button{
 section{
     display: contents;
 }
-/* End of Everything Selectors */
 
-/* Container */
-.container{
-    max-width: 1536px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    display: grid;
-    height: auto;
-    grid-gap: 0.2rem;
-    margin-top: 1em;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 
-        minmax(100px, auto) 
-        minmax(200px, auto) 
-        minmax(100px, auto) 
-        minmax(200px, auto) 
-        minmax(258px, auto) 
-        minmax(100px, auto) 
-        minmax(200px, auto) 
-        minmax(100px, auto) 
-        minmax(200px, auto);
-    grid-template-areas: 
-        "hero-header hero-header hero-header hero-header"
-        "hero-box hero-box hero-box hero-box"
-        "wing-header wing-header wing-header wing-header"
-        "wing-img-box1 wing-img-box1 wing-img-box2 wing-img-box2"
-        "main1-review main1-review main2-review main2-review"
-        "content-header content-header content-header content-header"
-        "content1 content2 content3 content4"
-        "strip-header strip-header strip-header strip-header"
-        "strip strip strip strip";
+.section-header{
+    display: flex;
+    font-size: 4vw;
+    align-items: center;
 }
-/* End of Container */
+
+.wings{
+    cursor: pointer;
+}
+/* End of Everything Selectors */
 
 /* Search Bar */
 .search-container{
@@ -121,10 +95,9 @@ section{
 }
 
 .hero img{
-    height: 100%;
-    width: 100%;
+    height: 90%;
+    width: 90%;
     object-fit: cover;
-    position: relative;
 }
 
 .hero-box{
@@ -134,27 +107,34 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-    display: flex;
 }
 
 .hero-box h1{
-    position: absolute;
     color: white;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 5vw;
+    white-space: nowrap;
 }
 
 .hero-box button{
-    position: absolute;
+    padding: 1vw 2vw;
+    border: none;
+    border-radius: 2px;
+    background-color: rgb(255, 115, 0);
+    color: white;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    font-size: 2vw;
+    font-weight: bold;
 }
-/*.hero-box:hover img{
-    filter: blur(1px);
-} */
 
-.hero-box:hover h1{
-    display: block;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+.hero-overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 /* End of Hero */
 
@@ -162,12 +142,6 @@ section{
 
 #wing-header{
     grid-area: wing-header;
-}
-
-.section-header{
-    display: flex;
-    font-size: 4vw;
-    align-items: center;
 }
 
 .wing-img{
@@ -192,58 +166,29 @@ section{
     background-color: blue;
 }
 
-
-/* End of Wing Section */
-
-/* Main */
-
-#main1-review{
-    grid-area: main1-review;
+#wing-review-box1{
+    grid-area: wing-review-box1;
     text-align: left;
     display: flex;
     flex-direction: column;
 }
 
-#main2-review{
-    grid-area: main2-review;
+#wing-review-box2{
+    grid-area: wing-review-box2;
 }
 
-.reviews-title{
+.wing-reviews-title{
     font-weight: bold;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
-#profile-img{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #cbcbcb;
-}
-
-.review-container{
-    background-color: #ffffff;
-    border: 1px solid rgb(215, 215, 215);
-    height: 100%;
-}
-
-#review-stars{
+.review-stars{
     margin-bottom: 10px;
 }
+/* End of Wing Section */
 
-#profile-container{
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px
-}
-
-#review-text{
-    padding: 10px
-}
-/* End of Main */
-
-/* Start of Content */
+/* Start of Craving Content */
 
 #content-header{
     grid-area: content-header;
@@ -363,7 +308,7 @@ section{
 
 #content4:hover p{
     display: block;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7)
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 #content4:hover img{
@@ -375,7 +320,7 @@ section{
     width: 100%;
     object-fit: cover;
 }
-/* End of Content */
+/* End of Craving Content */
 
 /* Start of Strip */
 #strip-header{
@@ -402,8 +347,8 @@ section{
 
 /* Start of Desserts */
 .dessert{
-    width: 150px;
-    height: 150px;
+    width: 25vw;
+    height: 25vw;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -420,6 +365,10 @@ section{
     font-weight: bold;
     text-align: center;
 }
+
+.dessert:hover {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
 /* End of Desserts */
 
 /* Start of Footer */
@@ -431,6 +380,7 @@ footer{
     justify-content: space-between;
     flex-wrap: wrap;
     position: sticky;
+    margin-top: 5vw;
 }
 
 footer a{
@@ -524,37 +474,42 @@ footer a{
     line-height: 30px;
     font-weight: 300;
 }
-
-/* End of Recipe Details Page */
-
-/* Media Queries 
-@media only screen and (max-width: 550px){
-
-    .container{
-        display: grid;
-        height: auto;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 50px 200px 50px 1.2fr 50px 0.8fr;
-        grid-template-areas: 
-            "main-header main-header main-header main-header"
-            "main main main main"
-            "content-header content-header content-header content-header"
-            "content1 content2 content3 content4"
-            "strip-header strip-header strip-header strip-header"
-            "strip strip strip strip";
-        grid-gap: 0.2rem;
-        text-align: center;
-        margin: 10px;
-        justify-content: center;
-    }
-
-} */
   
   /* 2xl */
   @media (max-width: 1536px) {
-    .container {
-      max-width: 1280px;
-    }
+    /* Container */
+    .container{
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: grid;
+    height: auto;
+    grid-gap: 0.2rem;
+    margin-top: 1em;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 
+        minmax(200px, auto) /* Hero Box */
+        minmax(100px, auto) /* Wing Header */
+        minmax(200px, auto) /* Wing Imgs */
+        minmax(50px,  auto) /* Wing Review Box */
+        minmax(100px, auto) /* Craving Content Header */
+        minmax(200px, auto) /* Content Imgs */
+        minmax(100px, auto) /* Strip Header for Desserts*/
+        minmax(200px, auto);/* Strip for Desserts */
+    grid-template-areas: 
+        "hero-box hero-box hero-box hero-box"
+        "wing-header wing-header wing-header wing-header"
+        "wing-img-box1 wing-img-box1 wing-img-box2 wing-img-box2"
+        "wing-review-box1 wing-review-box1 wing-review-box2 wing-review-box2"
+        "content-header content-header content-header content-header"
+        "content1 content2 content3 content4"
+        "strip-header strip-header strip-header strip-header"
+        "strip strip strip strip";
+}
+/* End of Container */
   }
   
   /* xl */
@@ -587,7 +542,99 @@ footer a{
   
   /* xs */
   @media (max-width: 475px) {
-    .container {
-      width: 100%;
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        display: flex;
+        height: auto;
+        gap: 0.5rem;
+        margin-top: 1em;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        
     }
+    #strip{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+    .dessert{
+        width: 100px;
+        height: 100px;
+    }
+    footer{
+        background-color: black;
+        padding: 10px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: sticky;
+        margin-top: 50px;
+    }
+    
+    footer a{
+        color: rgb(255, 115, 0);
+        text-decoration: none;
+    }
+    
+    #footer-contacts{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    footer p{
+        font-size: 10px;
+    }
+
+    #strip-header{
+        grid-area: strip-header;
+        font-size: 4vw;
+        display: flex;
+        align-items: center;
+    }
+
+    .content{
+        width: 40vw;
+        height: 40vw;
+    }
+
+    .section-header{
+        width: 100%;
+        text-align: center;
+        margin: 1em
+    }
+
+    .wing-box{
+        width: 40vw;
+        height: 40vw;
+    }
+
+    #wing-review-box1{
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        font-size: 4vw;
+    }
+
+    #wing-review-box2{
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        font-size: 4vw;
+    }
+
+
+    .hero-overlay{
+        position: absolute;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
   }
