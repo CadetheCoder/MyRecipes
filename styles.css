@@ -30,10 +30,6 @@ section{
     align-items: center;
 }
 
-.wings{
-    cursor: pointer;
-}
-
 .contents-container{
     display: contents;
 }
@@ -44,13 +40,13 @@ section{
     width: max-content;
     display: flex;
     align-items: center;
-    padding: 6px;
+    padding: 1vw;
     border-radius: 28px;
     background: #f6f6f6;
 }
 
 #search-input {
-    font-size: 16px;
+    font-size: 2vw;
     color: #333333;
     margin-left: 14px;
     outline: none;
@@ -85,6 +81,81 @@ section{
 #logo-img {
     width: 100px
 }
+
+.off-screen-menu{
+    height: 100vh;
+    width: 100%;
+    max-width: 475px;
+    position: fixed;
+    top: 0;
+    right: -475px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1rem;
+    transition: right .3 ease-in-out;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.9); 
+}
+
+.off-screen-menu ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.off-screen-menu.active{
+    right: 0;
+}
+
+.ham-menu{
+    height: 50px;
+    width: 40px;
+    margin-left: auto;
+    position: relative;
+    display: none;
+    z-index: 1;
+}
+
+.ham-menu span{
+    height: 2px;
+    width: 100%;
+    background-color: rgb(255, 115, 0);
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+
+.ham-menu.active span {
+    background-color: white;
+}
+
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 /* End Of Nav */
 
 /* Start Of Hero */
@@ -152,6 +223,7 @@ section{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .wing-box{
@@ -162,12 +234,10 @@ section{
 #wing-img-box1{
     cursor: pointer;
     grid-area: wing-img-box1;
-    background-color: red;
 }
 
 #wing-img-box2{
     grid-area: wing-img-box2;
-    background-color: blue;
 }
 
 #wing-review-box1{
@@ -175,10 +245,12 @@ section{
     text-align: left;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 
 #wing-review-box2{
     grid-area: wing-review-box2;
+    cursor: pointer;
 }
 
 .wing-reviews-title{
@@ -646,5 +718,45 @@ footer a{
 
     .hero-overlay button{
         max-width: 100px;
+    }
+
+    .ham-menu{
+        display: block;
+    }
+
+    .on-screen-menu{
+        display: none;
+    }
+
+    
+    #logo-img {
+        width: 15vw
+    }
+
+    .search-container{
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 1vw;
+    border-radius: 28px;
+    background: #f6f6f6;
+    }
+
+    #search-input {
+        font-size: 10px;
+        color: #333333;
+        margin-left: 14px;
+        outline: none;
+        border: none;
+        background: transparent;
+    }
+
+    .search{
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .off-screen-menu ul li a:hover{
+        color: rgb(255, 115, 0);
     }
   }
