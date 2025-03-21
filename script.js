@@ -76,9 +76,9 @@ if(window.location.pathname.includes("search-results.html")){
     
     if (recipe) {
         recipeDisplay.innerHTML = `
-        
+
         <h1 id="search-results-recipe-name">${recipe.name}</h1>
-        <img src="${recipe.image}" alt="${recipe.alt}" id="search-results-img">
+            <img src="${recipe.image}" alt="${recipe.alt}" id="search-results-img">
 
         <div id="search-results-ingredients-container">
 

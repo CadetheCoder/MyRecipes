@@ -471,7 +471,6 @@ footer a{
 }
 
 #search-results-ingredients-title{
-    margin-top: 10px;
 }
 
 #search-results-img{
@@ -490,13 +489,17 @@ footer a{
 }
 
 #ingredients-box{
+    margin-top: 10px;
     background-color: rgb(255, 255, 255);
     max-width: 300px;
+    font-size: 10px;
 }
 
 #instructions-box{
+    margin-top: 10px;
     background-color: rgb(255, 255, 255);
     max-width: 300px;
+    font-size: 10px;
 }
 
 #search-results-ingredients-container{
@@ -506,13 +509,19 @@ footer a{
 }
 
 #recipe-display{
+    max-width: 600px;
 }
 
 .search-results-container {
-    max-width: 800px;  /* Adjust this value as needed */
+    max-width: 600px;  /* Adjust this value as needed */
     margin: 0 auto;   /* Centers the container */
     padding: 0 20px;  /* Adds padding to prevent text from touching the screen edges */
-  }
+}
+
+#search-results-image-container{
+    display: flex;
+}
+
 /* End of Search Results Page */
   
 /* 2xl */
@@ -555,12 +564,9 @@ footer a{
 
 /* xl */
 @media (max-width: 1280px) {
-
 .container {
     max-width: 1024px;
 }
-
-
 }
 
 /* lg */
@@ -568,19 +574,11 @@ footer a{
 .container {
     max-width: 768px;
 }
-
-
-
-
 }
 
 /* md */
 @media (max-width: 768px) {
 .container {
-    max-width: 640px;
-}
-
-.search-results-container{
     max-width: 640px;
 }
 }
@@ -590,8 +588,6 @@ footer a{
 .container {
     max-width: 475px;
 }
-
-
 }
 
 /* xs */
@@ -608,7 +604,6 @@ footer a{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    
 }
 
 #strip{
@@ -762,7 +757,18 @@ background: #f6f6f6;
 }
 
 .container {
-    max-width: 800px;  /* Adjust this value as needed */
+    max-width: 600px;  /* Adjust this value as needed */
     margin: 0 auto;   /* Centers the container */
     padding: 0 20px;
+    margin-top: 10px;
+}
+
+#recipe-display{
+    max-width: 600px;
+}
+
+.search-results-container {
+    max-width: 300px;  /* Adjust this value as needed */
+    margin: 0 auto;   /* Centers the container */
+    padding: 0 20px;  /* Adds padding to prevent text from touching the screen edges */
 }
