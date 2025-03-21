@@ -56,6 +56,13 @@ section{
 /* End of Search Bar */
 
 /* Start Of Nav */
+.nav-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 800px;  /* Adjust this value as needed */
+    width: 100%;
+}
 .navbar{
     background-color: rgb(21, 22, 21);
     display: flex;
@@ -458,40 +465,60 @@ footer a{
 
 /* Start of Search Results Page */
 
-.search-results-container{
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
 #recipe-display li{
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid rgb(255, 115, 0);
+    margin: 20px;
 }
 
-#recipe-display{  
-    margin: 50px;
+#search-results-ingredients-title{
+    margin-top: 10px;
 }
 
 #search-results-img{
-    height: 300px;
-    width: 300px;
+    max-height: 300px;
+    max-width: 300px;
+    width: 100%;
+    height: 100%;
 }
 
 #search-results-recipe-name{
     margin-bottom: 10px;
+    font-size: clamp(5vw, 6vw, 6vw);
+    margin-top: 10px;
+    border-bottom: 2px solid rgb(255, 115, 0);
+    max-width: 600px;
 }
 
 #ingredients-box{
-    background-color: red;
+    background-color: rgb(255, 255, 255);
     max-width: 300px;
 }
 
+#instructions-box{
+    background-color: rgb(255, 255, 255);
+    max-width: 300px;
+}
+
+#search-results-ingredients-container{
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#recipe-display{
+}
+
+.search-results-container {
+    max-width: 800px;  /* Adjust this value as needed */
+    margin: 0 auto;   /* Centers the container */
+    padding: 0 20px;  /* Adds padding to prevent text from touching the screen edges */
+  }
 /* End of Search Results Page */
   
-  /* 2xl */
-  @media (max-width: 1536px) {
-    /* Container */
-    .container{
+/* 2xl */
+@media (max-width: 1536px) {
+
+.container{
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
@@ -521,227 +548,221 @@ footer a{
         "content1 content2 content3 content4"
         "strip-header strip-header strip-header strip-header"
         "strip strip strip strip";
+    }
+
+
 }
-/* End of Container */
-  }
-  
-  /* xl */
-  @media (max-width: 1280px) {
-    .container {
-      max-width: 1024px;
-    }
-  }
-  
-  /* lg */
-  @media (max-width: 1024px) {
-    .container {
-      max-width: 768px;
-    }
-  }
-  
-  /* md */
-  @media (max-width: 768px) {
-    .container {
-      max-width: 640px;
-    }
-  }
-  
-  /* sm */
-  @media (max-width: 640px) {
-    .container {
-      max-width: 475px;
-    }
-  }
-  
-  /* xs */
-  @media (max-width: 475px) {
-    .container{
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        display: flex;
-        height: auto;
-        gap: 0.5rem;
-        margin-top: 1em;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        
-    }
 
-    #strip{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 50px;
-        flex-wrap: wrap;
-    }
+/* xl */
+@media (max-width: 1280px) {
+
+.container {
+    max-width: 1024px;
+}
+
+
+}
+
+/* lg */
+@media (max-width: 1024px) {
+.container {
+    max-width: 768px;
+}
+
+
+
+
+}
+
+/* md */
+@media (max-width: 768px) {
+.container {
+    max-width: 640px;
+}
+
+.search-results-container{
+    max-width: 640px;
+}
+}
+
+/* sm */
+@media (max-width: 640px) {
+.container {
+    max-width: 475px;
+}
+
+
+}
+
+/* xs */
+@media (max-width: 475px) {
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    height: auto;
+    gap: 0.5rem;
+    margin-top: 1em;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     
-    .dessert{
-        width: 30vw;
-        height: 30vw;
-    }
+}
 
-    footer{
-        background-color: black;
-        padding: 10px;
-        color: white;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        position: sticky;
-        margin-top: 50px;
-    }
-    
-    footer a{
-        color: rgb(255, 115, 0);
-        text-decoration: none;
-    }
-    
-    #footer-contacts{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
+#strip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
 
-    footer p{
-        font-size: 10px;
-    }
+.dessert{
+    width: 30vw;
+    height: 30vw;
+}
 
-    #strip-header{
-        grid-area: strip-header;
-        font-size: 4vw;
-        display: flex;
-        align-items: center;
-    }
+footer{
+    background-color: black;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: sticky;
+    margin-top: 50px;
+}
 
-    .section-header{
-        width: 100%;
-        text-align: center;
-        margin: 1em
-    }
+footer a{
+    color: rgb(255, 115, 0);
+    text-decoration: none;
+}
 
-    .wing-box{
-        width: 100%;
-        height: 40vw;
-    }
+#footer-contacts{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
-    #wing-review-box1{
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        font-size: 4vw;
-    }
+footer p{
+    font-size: 10px;
+}
 
-    #wing-review-box2{
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        font-size: 4vw;
-        text-align: center;
-    }
-
-    .hero-overlay{
-        position: absolute;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .hero-box{
-        width: 100%;
-    }
-
-    .hero img{
-        width: 100%;
-    }
-    
-    .contents-container{
-        display: flex;
-    }
-
-    .content{
-        width: 100%;
-        height: 60vw;
-        font-size: 5vw;
-    }
-
-    .hero-overlay button{
-        max-width: 100px;
-    }
-
-    .ham-menu{
-        display: block;
-    }
-
-    .on-screen-menu{
-        display: none;
-    }
-
-    
-    #logo-img {
-        width: 15vw
-    }
-
-    .search-container{
-    width: max-content;
+#strip-header{
+    grid-area: strip-header;
+    font-size: 4vw;
     display: flex;
     align-items: center;
-    padding: 1vw;
-    border-radius: 28px;
-    background: #f6f6f6;
-    }
+}
 
-    #search-input {
-        font-size: 10px;
-        color: #333333;
-        margin-left: 14px;
-        outline: none;
-        border: none;
-        background: transparent;
-    }
+.section-header{
+    width: 100%;
+    text-align: center;
+    margin: 1em
+}
 
-    .search{
-        margin-right: auto;
-        margin-left: auto;
-    }
+.wing-box{
+    width: 100%;
+    height: 40vw;
+}
 
-    .off-screen-menu ul li a:hover{
-        color: rgb(255, 115, 0);
-    }
+#wing-review-box1{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 4vw;
+}
 
-    .navbar{
-        padding: 2vw
-    }
-    /* */
-    .search-results-container{
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-    
-    #recipe-display li{
-        border-bottom: 1px solid grey;
-    }
-    
-    #recipe-display{  
-        margin: 50px;
-    }
-    
-    #search-results-img{
-        height: 300px;
-        width: 300px;
-    }
-    
-    #search-results-recipe-name{
-        margin-bottom: 10px;
-    }
-    
-    #ingredients-box{
-        background-color: red;
-        max-width: 300px;
-    }
-  }
+#wing-review-box2{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    font-size: 4vw;
+    text-align: center;
+}
+
+.hero-overlay{
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-box{
+    width: 100%;
+}
+
+.hero img{
+    width: 100%;
+}
+
+.contents-container{
+    display: flex;
+}
+
+.content{
+    width: 100%;
+    height: 60vw;
+    font-size: 5vw;
+}
+
+.hero-overlay button{
+    max-width: 100px;
+}
+
+.ham-menu{
+    display: block;
+}
+
+.on-screen-menu{
+    display: none;
+}
+
+
+#logo-img {
+    width: 15vw
+}
+
+.search-container{
+width: max-content;
+display: flex;
+align-items: center;
+padding: 1vw;
+border-radius: 28px;
+background: #f6f6f6;
+}
+
+#search-input {
+    font-size: 10px;
+    color: #333333;
+    margin-left: 14px;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.search{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.off-screen-menu ul li a:hover{
+    color: rgb(255, 115, 0);
+}
+
+.navbar{
+    padding: 2vw
+}
+/* Start of Search Results Page*/
+
+}
+
+.container {
+    max-width: 800px;  /* Adjust this value as needed */
+    margin: 0 auto;   /* Centers the container */
+    padding: 0 20px;
+}

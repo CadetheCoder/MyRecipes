@@ -76,16 +76,23 @@ if(window.location.pathname.includes("search-results.html")){
     
     if (recipe) {
         recipeDisplay.innerHTML = `
-        <h2 id="search-results-recipe-name">${recipe.name}</h2>
+        
+        <h1 id="search-results-recipe-name">${recipe.name}</h1>
         <img src="${recipe.image}" alt="${recipe.alt}" id="search-results-img">
-        <h2>Ingredients</h2>
-        <div id="ingredients-box">
-            <ul>${recipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join("")}</ul>
+
+        <div id="search-results-ingredients-container">
+
+            <div id="ingredients-box">
+                <h2 id="search-results-ingredients-title">Ingredients</h2>
+                <ul>${recipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join("")}</ul>
+            </div>
+       
+            <div id=instructions-box>
+                <h2>Instructions</h2>
+                <ol>${recipe.instructions.map(instruction => `<li>${instruction}</li>`).join("")}</ol>
+            </div>
         </div>
-        <h2>Instructions</h2>
-        <div id=instructions-box>
-            <ol>${recipe.instructions.map(instruction => `<li>${instruction}</li>`).join("")}</ol>
-        </div>
+    
         
         
         

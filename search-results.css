@@ -1,0 +1,52 @@
+/* Start of Search Results Page */
+
+#recipe-display li{
+    border-bottom: 1px solid rgb(255, 115, 0);
+    margin: 20px;
+}
+
+#search-results-ingredients-title{
+    margin-top: 10px;
+}
+
+#search-results-img{
+    max-height: 300px;
+    max-width: 300px;
+    width: 100%;
+    height: 100%;
+}
+
+#search-results-recipe-name{
+    margin-bottom: 10px;
+    font-size: clamp(5vw, 6vw, 6vw);
+    margin-top: 10px;
+    border-bottom: 2px solid rgb(255, 115, 0);
+    max-width: 600px;
+}
+
+#ingredients-box{
+    background-color: rgb(255, 255, 255);
+    max-width: 300px;
+}
+
+#instructions-box{
+    background-color: rgb(255, 255, 255);
+    max-width: 300px;
+}
+
+#search-results-ingredients-container{
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#recipe-display{
+}
+
+.search-results-container {
+    max-width: 800px;  /* Adjust this value as needed */
+    margin: 0 auto;   /* Centers the container */
+    padding: 0 20px;  /* Adds padding to prevent text from touching the screen edges */
+  }
+/* End of Search Results Page */
+
