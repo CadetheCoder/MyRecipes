@@ -110,12 +110,13 @@ section{
 }
 
 .ham-menu{
-    height: 50px;
-    width: 40px;
+    height: 11vw;
+    width: 10vw;
     margin-left: auto;
     position: relative;
     display: none;
     z-index: 1;
+    margin-right: 5px;
 }
 
 .ham-menu span{
@@ -455,85 +456,37 @@ footer a{
 }
 /* End of Footer */
 
-/* Results Page */
+/* Start of Search Results Page */
 
-#results-container{
-    display: flex;
-    justify-content: center;
-    background-color: #ffffff;
-    align-items: center;
+.search-results-container{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-#results{
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 550px;
-    justify-content: center;
-    height: 120vh
+#recipe-display li{
+    border-bottom: 1px solid grey;
 }
 
-#results-img{
-    height: auto;
+#recipe-display{  
+    margin: 50px;
 }
 
-#results-card{
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    max-width: 150px;
-    height: 150px;
-    font-size: 10px;
-    cursor: pointer;
+#search-results-img{
+    height: 300px;
+    width: 300px;
 }
 
-#results-title {
-    margin: 5px;
-    font-weight: bold;
+#search-results-recipe-name{
+    margin-bottom: 10px;
 }
 
-#results-rating {
-    font-size: 7px;
-    margin-left: 5px;
+#ingredients-box{
+    background-color: red;
+    max-width: 300px;
 }
 
-/* End of Results Page */
-
-/* Start of Recipe Details Page */
-
-#recipe-details{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-}
-
-#recipe-details-title{
-    margin: 20px;
-}
-
-#ingredients-title{
-    margin: 20px;
-}
-
-#ingredients-list{
-    text-align: left;
-    margin: 20px;
-    font-size: 10px;
-}
-
-#instructions-title{
-    margin: 20px
-}
-
-#instructions{
-    font-size: 10px;
-    margin: 20px;
-    text-align: left;
-    line-height: 30px;
-    font-weight: 300;
-}
+/* End of Search Results Page */
   
   /* 2xl */
   @media (max-width: 1536px) {
@@ -758,5 +711,37 @@ footer a{
 
     .off-screen-menu ul li a:hover{
         color: rgb(255, 115, 0);
+    }
+
+    .navbar{
+        padding: 2vw
+    }
+    /* */
+    .search-results-container{
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    #recipe-display li{
+        border-bottom: 1px solid grey;
+    }
+    
+    #recipe-display{  
+        margin: 50px;
+    }
+    
+    #search-results-img{
+        height: 300px;
+        width: 300px;
+    }
+    
+    #search-results-recipe-name{
+        margin-bottom: 10px;
+    }
+    
+    #ingredients-box{
+        background-color: red;
+        max-width: 300px;
     }
   }
