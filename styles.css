@@ -26,13 +26,14 @@ section{
 
 .section-header{
     display: flex;
-    font-size: 4vw;
+    font-size: 25px;
     align-items: center;
 }
 
 .contents-container{
     display: contents;
 }
+
 /* End of Everything Selectors */
 
 /* Search Bar */
@@ -196,7 +197,7 @@ section{
     color: white;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    font-size: 5vw;
+    font-size: 30px;
     white-space: nowrap;
 }
 
@@ -208,7 +209,7 @@ section{
     color: white;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     cursor: pointer;
-    font-size: 2vw;
+    font-size: 10px;
     font-weight: bold;
 }
 
@@ -276,9 +277,6 @@ section{
 
 #content-header{
     grid-area: content-header;
-    display: flex;
-    font-size: 4vw;
-    align-items: center;
 }
 
 #content1{
@@ -393,9 +391,6 @@ section{
 /* Start of Strip */
 #strip-header{
     grid-area: strip-header;
-    font-size: 4vw;
-    display: flex;
-    align-items: center;
 }
 
 #strip{
@@ -415,10 +410,13 @@ section{
 
 /* Start of Desserts */
 .dessert{
-    width: 25vw;
-    height: 25vw;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     cursor: pointer;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .dessert img{
@@ -582,82 +580,41 @@ footer a{
     text-decoration: underline;
 }
 /* End of Recipe Details Page */
+
+/* Start of Container */
+.container {
+    max-width: 600px; 
+    margin: 0 auto;  
+    padding: 0 20px;
+    margin-top: 10px;
+    display: grid;
+    height: auto;
+    grid-gap: 0.2rem;
+    margin-top: 1em;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 
+        minmax(200px, auto) /* Hero Box */
+        minmax(100px, auto) /* Wing Header */
+        minmax(200px, auto) /* Wing Imgs */
+        minmax(50px,  auto) /* Wing Review Box */
+        minmax(100px, auto) /* Craving Content Header */
+        minmax(200px, auto) /* Content Imgs */
+        minmax(100px, auto) /* Strip Header for Desserts*/
+        minmax(200px, auto);/* Strip for Desserts */
+    grid-template-areas: 
+        "hero-box hero-box hero-box hero-box"
+        "wing-header wing-header wing-header wing-header"
+        "wing-img-box1 wing-img-box1 wing-img-box2 wing-img-box2"
+        "wing-review-box1 wing-review-box1 wing-review-box2 wing-review-box2"
+        "content-header content-header content-header content-header"
+        "content1 content2 content3 content4"
+        "strip-header strip-header strip-header strip-header"
+        "strip strip strip strip";
+}
+/* End of Container */
   
-/* 2xl */
-@media (max-width: 1536px) {
-
-    .container{
-        max-width: 1280px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        display: grid;
-        height: auto;
-        grid-gap: 0.2rem;
-        margin-top: 1em;
-        justify-content: center;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 
-            minmax(200px, auto) /* Hero Box */
-            minmax(100px, auto) /* Wing Header */
-            minmax(200px, auto) /* Wing Imgs */
-            minmax(50px,  auto) /* Wing Review Box */
-            minmax(100px, auto) /* Craving Content Header */
-            minmax(200px, auto) /* Content Imgs */
-            minmax(100px, auto) /* Strip Header for Desserts*/
-            minmax(200px, auto);/* Strip for Desserts */
-        grid-template-areas: 
-            "hero-box hero-box hero-box hero-box"
-            "wing-header wing-header wing-header wing-header"
-            "wing-img-box1 wing-img-box1 wing-img-box2 wing-img-box2"
-            "wing-review-box1 wing-review-box1 wing-review-box2 wing-review-box2"
-            "content-header content-header content-header content-header"
-            "content1 content2 content3 content4"
-            "strip-header strip-header strip-header strip-header"
-            "strip strip strip strip";
-    }
-
-
-}
-
-/* xl */
-@media (max-width: 1280px) {
-
-    .container {
-        max-width: 1024px;
-    }
-
-}
-
-/* lg */
-@media (max-width: 1024px) {
-
-    .container {
-        max-width: 768px;
-    }
-
-}
-
-/* md */
-@media (max-width: 768px) {
-
-    .container {
-        max-width: 640px;
-    }
-
-}
-
-/* sm */
-@media (max-width: 640px) {
-    .container {
-
-        max-width: 475px;
-    }
-
-}
-
-/* xs */
+/* Start of Extra Small */
 @media (max-width: 475px) {
 
     .container{
@@ -685,6 +642,10 @@ footer a{
     .dessert{
         width: 30vw;
         height: 30vw;
+        margin-top: 1px;
+        margin-bottom: 10px;
+        margin-right: 1px;
+        margin-left: 1px;
     }
 
     footer{
@@ -711,13 +672,6 @@ footer a{
 
     footer p{
         font-size: 10px;
-    }
-
-    #strip-header{
-        grid-area: strip-header;
-        font-size: 4vw;
-        display: flex;
-        align-items: center;
     }
 
     .section-header{
@@ -888,11 +842,55 @@ footer a{
         text-decoration: underline;
     }
 
-}
+    .hero-box h1{
+        color: white;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        font-size: 25px;
+        white-space: nowrap;
+    }
+    
+    .hero-box button{
+        padding: 1vw 2vw;
+        border: none;
+        border-radius: 2px;
+        background-color: rgb(255, 115, 0);
+        color: white;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        cursor: pointer;
+        font-size: 8px;
+        font-weight: bold;
+    }
 
-.container {
-    max-width: 600px; 
-    margin: 0 auto;  
-    padding: 0 20px;
-    margin-top: 10px;
 }
+/* End of Extra Small */
+
+/* Start of 2x Extra Small */
+@media (max-width: 375px) {
+    .hero-box h1{
+        color: white;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        font-size: 15px;
+        white-space: nowrap;
+    }
+    
+    .hero-box button{
+        padding: 1vw 2vw;
+        border: none;
+        border-radius: 2px;
+        background-color: rgb(255, 115, 0);
+        color: white;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        cursor: pointer;
+        font-size: 6px;
+        font-weight: bold;
+    }
+
+    .section-header{
+        display: flex;
+        font-size: 13px;
+        align-items: center;
+    }
+}
+/* End of 2x Extra Small */
