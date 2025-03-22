@@ -2,10 +2,16 @@ const hamMenu = document.querySelector(".ham-menu");
 const offScreenMenu = document.querySelector(".off-screen-menu");
 const searchInput = document.getElementById("search-input");
 const form = document.querySelector(".search-container");
+const star = `<i class="fa-solid fa-star" style="color: #FFD43B;"></i>`;
+const clock = `<i class="fa-solid fa-clock" style="color: #74C0FC;"></i>`;
+const kitchenSet = `<i class="fa-solid fa-kitchen-set" style="color: #74C0FC;"></i>`;
 
 const recipes = [
     {
       name: "Nasi Goreng",
+      image: "images/Nasi Goreng recipe img.jpg",
+      alt: "A bowl of Indonesian fried rice.",
+      stars: `${star}${star}${star}${star}${star} (22)`,
       ingredients: [
         "1 tbsp oil",
         "5 oz / 150g chicken breast, thinly sliced (or other protein)",
@@ -31,8 +37,11 @@ const recipes = [
         "Add rice, 2 tbsp kecap manis and shrimp paste, if using. Cook, stirring constantly, for 2 minutes until sauce reduces down and rice grains start to caramelise (key for flavour!).",
         "Serve, garnished with garnishes of choice (green onions, red chilli, fried shallots)."
       ],
-      image: "images/Nasi Goreng recipe img.jpg",
-      alt: "A bowl of Indonesian fried rice."
+      difficulty: "easy",
+      serves: "4-6",
+      time: "50 mins",
+      desc: "This fragrant rice dish with chicken, prawns and shredded omelette is the ultimate comfort food for spice lovers.",
+      creator: "Jack Stein",
     },
     {
       name: "Recipe 2",
@@ -68,37 +77,90 @@ searchInput.addEventListener("keydown", e => {
     }
 })
 
+// Search Results Page
 if(window.location.pathname.includes("search-results.html")){
     const urlParams = new URLSearchParams(window.location.search);
     const query = urlParams.get("query");
-    const recipe = recipes.find( r => r.name.toLowerCase());
-    const recipeDisplay = document.getElementById("recipe-display")
+    const recipe = recipes.find( r => r.name.toLowerCase() === query.toLowerCase());
+    const recipesDisplay = document.getElementById("search-results-display")
     
     if (recipe) {
-        recipeDisplay.innerHTML = `
+        recipesDisplay.innerHTML = `
 
-        <h1 id="search-results-recipe-name">${recipe.name}</h1>
-            <img src="${recipe.image}" alt="${recipe.alt}" id="search-results-img">
+            <a href="/recipe-details.html?recipe=${encodeURIComponent(recipe.name)}">
+                <div id="search-results-box">
+                    <img src="${recipe.image}" alt="${recipe.alt}" id="search-results-img">
+                    <div id="search-results-text-box">
 
-        <div id="search-results-ingredients-container">
+                        <h2>${recipe.name}</h2>
+                        <p>${recipe.stars}</p>
+                        <p>${recipe.desc}</p>
+
+                        <div id="search-results-emoji-box">
+
+                            <p>${clock} ${recipe.time}</p>
+                            <p>${kitchenSet} ${recipe.difficulty}</p>
+
+                        </div>
+                    </div>
+                </div>
+            </a>`;
+
+    } else {
+        recipes.Display.innerHTML = `<p>No recipe found for ${decodeURIComponent(query)}.</p>`
+    }
+}
+
+// Recipe Details Page
+if(window.location.pathname.includes("recipe-details.html")){
+    const urlParams = new URLSearchParams(window.location.search);
+    const recipeName = urlParams.get("recipe");
+
+    const recipe = recipes.find( r => r.name.toLowerCase() === recipeName.toLocaleLowerCase());
+    const recipesDetails = document.getElementById("recipe-details-display")
+    
+    if (recipe) {
+        recipesDetails.innerHTML = `
+
+            <h1 id="recipe-details-recipe-name">${recipe.name}</h1>
+            <img src="${recipe.image}" alt="${recipe.alt}" id="recipe-details-img" loading="lazy">
+
+            <div id="recipe-details-info-box">
+
+                <div id="recipe-details-creator-box">
+
+                    <p>${recipe.creator}</p>
+                    <p>${recipe.stars}</p>
+
+                </div>
+        
+                <p>${recipe.desc}</p>
+
+                 <div id="recipe-details-emoji-box">
+
+                    <p>${clock} ${recipe.time}</p>
+                    <p>${kitchenSet} ${recipe.difficulty}</p>
+
+                </div>
+               
+            </div>
+
+            <div id="recipe-details-ingredients-container">
 
             <div id="ingredients-box">
-                <h2 id="search-results-ingredients-title">Ingredients</h2>
+                <h2 id="recipe-details-ingredients-title">Ingredients</h2>
                 <ul>${recipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join("")}</ul>
             </div>
-       
+
             <div id=instructions-box>
                 <h2>Instructions</h2>
                 <ol>${recipe.instructions.map(instruction => `<li>${instruction}</li>`).join("")}</ol>
             </div>
-        </div>
-    
-        
-        
-        
-        
-        
-        `
+
+            </div> 
+
+       `;
+    } else {
+        recipes.Display.innerHTML = `<p>Recipe not found.</p>`
     }
 }
-
