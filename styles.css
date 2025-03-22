@@ -237,7 +237,7 @@ section{
 
 .wing-box{
     width: 100%;
-    height: 200px;
+    height: 150px;
 }
 
 #wing-img-box1{
@@ -516,12 +516,14 @@ footer a{
 
 #recipe-details-display li{
     border-bottom: 1px solid rgb(255, 115, 0);
-    margin: 20px;
+    margin: 18px;
+    color: rgb(73, 73, 73);
+    padding-bottom: 5px;
 }
 
 #recipe-details-img{
-    max-height: 300px;
-    max-width: 300px;
+    max-height: 200px;
+    max-width: 200px;
     width: 100%;
     height: 100%;
 }
@@ -536,14 +538,12 @@ footer a{
 
 #ingredients-box{
     margin-top: 10px;
-    background-color: rgb(255, 255, 255);
     max-width: 300px;
     font-size: 10px;
 }
 
 #instructions-box{
     margin-top: 10px;
-    background-color: rgb(255, 255, 255);
     max-width: 300px;
     font-size: 10px;
 }
@@ -579,6 +579,10 @@ footer a{
     color: rgb(255, 115, 0);
     text-decoration: underline;
 }
+
+#recipe-details-desc{
+    color: rgb(73, 73, 73)
+}
 /* End of Recipe Details Page */
 
 /* Start of Container */
@@ -596,7 +600,7 @@ footer a{
     grid-template-rows: 
         minmax(200px, auto) /* Hero Box */
         minmax(100px, auto) /* Wing Header */
-        minmax(200px, auto) /* Wing Imgs */
+        minmax(150px, auto) /* Wing Imgs */
         minmax(50px,  auto) /* Wing Review Box */
         minmax(100px, auto) /* Craving Content Header */
         minmax(200px, auto) /* Content Imgs */
