@@ -19,6 +19,7 @@ const recipes = [
       time: "50 mins",
       desc: "This fragrant rice dish with chicken, prawns and shredded omelette is the ultimate comfort food for spice lovers.",
       creator: "Jack Stein",
+      category: "Indonesian",
       ingredients: [
         "1 tbsp oil",
         "5 oz / 150g chicken breast, thinly sliced (or other protein)",
@@ -56,6 +57,7 @@ const recipes = [
         time: "2 hrs 10 mins",
         desc: "Indulge yourself with this ultimate chocolate ganache cake recipe that is beautifully moist, rich and fudgy. Perfect for a celebration or an afternoon tea.",
         creator: "Angela Nilsen",
+        category: "Desserts",
         ingredients: [
             "200g dark chocolate (about 60% cocoa solids), chopped",
             "200g butter, cubed",
@@ -96,6 +98,7 @@ const recipes = [
         time: "25 mins",
         desc: "A simple chocolate chip cookie recipe for soft biscuits with a squidgy middle that will impress family and friends. Make plenty as they're sure to be a hit.",
         creator: "Valerie Barrett",
+        category: "Desserts",
         ingredients: [
             "150g salted butter, softened",
             "80g light brown muscovado sugar",
@@ -129,6 +132,7 @@ const recipes = [
         time: "1 hr 10 mins",
         desc: "Give a gift of homemade fudge to family and friends at Christmas with this recipe. It's flavoured with milk and dark chocolate, and made in the slow cooker for ease.",
         creator: "Esther Clark",
+        category: "Desserts",
         ingredients: [
           "397g can condensed milk",
           "400g milk chocolate, chopped",
@@ -157,6 +161,7 @@ const recipes = [
         time: "1 hr 10 mins",
         desc: "Sticky spiced wings make great finger food or canapés, and this version skips the deep-fried stage so they're healthier.",
         creator: "Good Food team",
+        category: "American",
         ingredients: [
           "1kg chicken wings",
           "1 tbsp baking powder",
@@ -191,6 +196,7 @@ const recipes = [
         time: "40 mins",
         desc: "Make 'buffalo cauliflower' for a veggie take on the spicy American classic. Served with a ranch dip, it makes an excellent Friday night sharing treat.",
         creator: "Esther Clark",
+        category: "American",
         ingredients: [
           "1 large cauliflower, cut into florets",
           "100g plain flour",
@@ -223,6 +229,7 @@ const recipes = [
         time: "1 hr 15 mins",
         desc: "Enjoy this gooey cheese and chicken pasta bake for the ultimate weekday family dinner. Serve straight from the dish with a dressed green salad.",
         creator: "Esther Clark",
+        category: "Italian",
         ingredients: [
           "2 tbsp olive oil",
           "1 onion, chopped",
@@ -259,6 +266,7 @@ const recipes = [
         time: "25 mins",
         desc: "Treat someone to a classic steak with Diane sauce for supper and impress with your flambé skills. For the ultimate luxury, we’ve gone for fillet steak.",
         creator: "Barney Desmazery",
+        category: "American",
         ingredients: [
           "2 fillet steaks (about 200g each), cut from the centre of the fillet",
           "25g butter",
@@ -294,6 +302,7 @@ const recipes = [
         time: "40 mins",
         desc: "Make these vibrant beef tacos with a pack of mince. Go the extra mile by creating your own spice mix for enhanced flavour, and opt for soft tortillas.",
         creator: "Barney Desmazery",
+        category: "Mexican",
         ingredients: [
           "1 tbsp olive oil",
           "1 onion, finely chopped",
@@ -334,6 +343,7 @@ const recipes = [
         time: "40 mins",
         desc: "Use chicken, ramen noodles, spinach, sweetcorn, and eggs to make this warming soup, ideal for when you crave something comforting yet light and wholesome.",
         creator: "Lina Croft",
+        category: "Asian",
         ingredients: [
           "700ml chicken stock",
           "3 garlic cloves, halved",
@@ -472,3 +482,59 @@ if(window.location.pathname.includes("recipe-details.html")){
     }
 }
 
+// Home Page Buttons 
+const wingBoxImg1 = document.getElementById("wing-img-box1");
+wingBoxImg1.addEventListener("click", () => {
+    window.location.href = `http://127.0.0.1:5500/recipe-details.html?recipe=Baked%20Buffalo%20Chicken%20Wings`;
+});
+
+const wingReviewBox1 = document.getElementById("wing-review-box1");
+wingReviewBox1.addEventListener("click", () => {
+    window.location.href = `http://127.0.0.1:5500/recipe-details.html?recipe=Baked%20Buffalo%20Chicken%20Wings`;
+});
+
+const wingBoxImg2 = document.getElementById("wing-img-box2");
+wingBoxImg2.addEventListener("click", () => {
+    window.location.href = `http://127.0.0.1:5500/recipe-details.html?recipe=Buffalo%20Cauliflower%20Wings`;
+});
+
+const wingReviewBox2 = document.getElementById("wing-review-box2");
+wingReviewBox2.addEventListener("click", () => {
+    window.location.href = `http://127.0.0.1:5500/recipe-details.html?recipe=Buffalo%20Cauliflower%20Wings`;
+});
+
+const content1 = document.getElementById("content1");
+content1.addEventListener("click", () => {
+    window.location.href = `http://127.0.0.1:5500/search-results.html?query=pasta`;
+});
+
+const content2 = document.getElementById("content2");
+content2.addEventListener("click", () => {
+    window.location.href = `http://127.0.0.1:5500/search-results.html?query=steak`;
+});
+
+const content3 = document.getElementById("content3");
+content3.addEventListener("click", () => {
+    window.location.href = `http://127.0.0.1:5500/search-results.html?query=taco`;
+});
+
+const content4 = document.getElementById("content4");
+content4.addEventListener("click", () => {
+    window.location.href = `http://127.0.0.1:5500/search-results.html?query=ramen`;
+});
+
+const dessert1 = document.getElementById("dessert1");
+dessert1.addEventListener("click", () => {
+    window.location.href = `http://127.0.0.1:5500/search-results.html?query=cake`;
+});
+
+
+const dessert2 = document.getElementById("dessert2");
+dessert2.addEventListener("click", () => {
+    window.location.href = `http://127.0.0.1:5500/search-results.html?query=cookie`;
+});
+
+const dessert3 = document.getElementById("dessert3");
+dessert3.addEventListener("click", () => {
+    window.location.href = `http://127.0.0.1:5500/search-results.html?query=fudge`;
+});

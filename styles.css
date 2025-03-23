@@ -585,6 +585,14 @@ footer a{
 }
 /* End of Recipe Details Page */
 
+/* Start of Category Page */
+.category-container{
+    height: 100vh;
+}
+
+
+/* End of Category Page */
+
 /* Start of Container */
 .container {
     max-width: 600px; 
