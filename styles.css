@@ -41,13 +41,13 @@ section{
     width: max-content;
     display: flex;
     align-items: center;
-    padding: 1vw;
+    padding: 10px;
     border-radius: 28px;
     background: #f6f6f6;
 }
 
 #search-input {
-    font-size: 2vw;
+    font-size: 20px;
     color: #333333;
     margin-left: 14px;
     outline: none;
@@ -61,8 +61,9 @@ section{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    max-width: 800px; 
+    max-width: 1150px; 
     width: 100%;
+    padding: 10px;
 }
 .navbar{
     background-color: rgb(21, 22, 21);
@@ -75,7 +76,7 @@ section{
 .navbar ul {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 30px;
 }
 
 .navbar ul li a {
@@ -84,25 +85,26 @@ section{
     color: white;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-size: 20px;
 }
 
 #logo-img {
-    width: 100px
+    width: 100px;
 }
 
 .off-screen-menu{
     height: 100vh;
     width: 100%;
-    max-width: 475px;
+    max-width: 640px;
     position: fixed;
     top: 0;
-    right: -475px;
+    right: -640px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 1rem;
+    font-size: 30px;
     transition: right .3 ease-in-out;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.9); 
@@ -111,6 +113,7 @@ section{
 .off-screen-menu ul{
     display: flex;
     flex-direction: column;
+    gap: 70px;
 }
 
 .off-screen-menu.active{
@@ -180,7 +183,7 @@ section{
 
 .hero img{
     height: 90%;
-    width: 90%;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -197,20 +200,23 @@ section{
     color: white;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    font-size: 30px;
+    font-size: 50px;
     white-space: nowrap;
 }
 
 .hero-box button{
-    padding: 1vw 2vw;
     border: none;
     border-radius: 2px;
     background-color: rgb(255, 115, 0);
     color: white;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     cursor: pointer;
-    font-size: 10px;
+    font-size: 20px;
     font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 11px;
+    padding-bottom: 11px;
 }
 
 .hero-overlay{
@@ -237,7 +243,7 @@ section{
 
 .wing-box{
     width: 100%;
-    height: 150px;
+    height: 300px;
 }
 
 #wing-img-box1{
@@ -266,6 +272,7 @@ section{
     font-weight: bold;
     margin-top: 5px;
     margin-bottom: 5px;
+    font-size: 25px;
 }
 
 .review-stars{
@@ -385,6 +392,7 @@ section{
     display: none;
     color: white;
     font-weight: bold;
+    font-size: 25px;
 }
 /* End of Craving Content */
 
@@ -410,8 +418,8 @@ section{
 
 /* Start of Desserts */
 .dessert{
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     cursor: pointer;
     margin-bottom: 20px;
@@ -430,6 +438,7 @@ section{
     margin: 5px;
     font-weight: bold;
     text-align: center;
+    font-size: 25px;
 }
 
 .dessert:hover {
@@ -440,24 +449,35 @@ section{
 /* Start of Footer */
 footer{
     background-color: black;
-    padding: 20px;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    position: sticky;
-    margin-top: 5vw;
+
 }
 
 footer a{
-    color: rgb(255, 115, 0);
     text-decoration: none;
+    padding: 10px;
+    color: white;
+}
+
+#copyright{
+    color: rgb(255, 115, 0);
 }
 
 #footer-contacts{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+}
+
+.footer-box{
+    max-width: 1000px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 5vw;
+    margin-left: auto;
+    margin-right: auto;
 }
 /* End of Footer */
 
@@ -519,6 +539,7 @@ footer a{
     margin: 18px;
     color: rgb(73, 73, 73);
     padding-bottom: 5px;
+    font-size: 20px;
 }
 
 #recipe-details-img{
@@ -533,19 +554,19 @@ footer a{
     margin-top: 10px;
     border-bottom: 2px solid rgb(255, 115, 0);
     max-width: 600px;
-    font-size: clamp(20px, 5vw, 30px);
+    font-size: clamp(20px, 5vw, 40px);
 }
 
 #ingredients-box{
     margin-top: 10px;
     max-width: 300px;
-    font-size: 10px;
+    font-size: 20px;
 }
 
 #instructions-box{
     margin-top: 10px;
     max-width: 300px;
-    font-size: 10px;
+    font-size: 20px;
 }
 
 #recipe-details-ingredients-container{
@@ -555,9 +576,13 @@ footer a{
 }
 
 .recipe-details-container {
-    max-width: 300px;  
-    margin: 0 auto;   
-    padding: 0 20px;  
+    max-width: 600px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;  
+    padding: 0 20px;
+    width: 100%;
 }
 
 #recipe-details-emoji-box{
@@ -567,7 +592,7 @@ footer a{
 
 #recipe-details-info-box p{
     margin-top: 10px;
-    font-size: 13px;
+    font-size: 20px;
 }
 
 #recipe-details-creator-box{
@@ -583,19 +608,29 @@ footer a{
 #recipe-details-desc{
     color: rgb(73, 73, 73)
 }
+
 /* End of Recipe Details Page */
 
 /* Start of Category Page */
 .category-container{
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.category-page-box{
+    height: 100px;
+    width: 200px;
+    background-color: orange;
+}
 
 /* End of Category Page */
 
 /* Start of Container */
 .container {
-    max-width: 600px; 
+    max-width: 1000px; 
     margin: 0 auto;  
     padding: 0 20px;
     margin-top: 10px;
@@ -608,7 +643,7 @@ footer a{
     grid-template-rows: 
         minmax(200px, auto) /* Hero Box */
         minmax(100px, auto) /* Wing Header */
-        minmax(150px, auto) /* Wing Imgs */
+        minmax(200px, auto) /* Wing Imgs */
         minmax(50px,  auto) /* Wing Review Box */
         minmax(100px, auto) /* Craving Content Header */
         minmax(200px, auto) /* Content Imgs */
@@ -625,8 +660,379 @@ footer a{
         "strip strip strip strip";
 }
 /* End of Container */
+
+  /* Start of 925px Media Query */
+  @media (max-width: 925px) {
+   
+    .hero-box h1{
+        color: white;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        font-size: 40px;
+        white-space: nowrap;
+    }
+
+    .hero img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .search-container{
+        width: max-content;
+        display: flex;
+        align-items: center;
+        padding: 8px;
+        border-radius: 28px;
+        background: #f6f6f6;
+    }
+    
+    #search-input {
+        font-size: 15px;
+        color: #333333;
+        margin-left: 14px;
+        outline: none;
+        border: none;
+        background: transparent;
+    }
+ }
+ /* End of 925px Media Query */
   
-/* Start of Extra Small */
+  /* Start of 768px Media Query */
+  @media (max-width: 768px) {
+  
+    .hero-box h1{
+        font-size: 30px;
+    }
+
+    .hero-box button{
+        border: none;
+        border-radius: 2px;
+        background-color: rgb(255, 115, 0);
+        color: white;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 7px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+/* End of 768px Media Query */
+
+/* Start of 641px Media Query */
+  @media (min-width: 641px) {
+    .off-screen-menu {
+      display: none;
+    }
+  }
+/* End of 641px Media Query */
+  
+/* Start of 640px Media Query */
+  @media (max-width: 640px) {
+
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        display: flex;
+        height: auto;
+        gap: 0.5rem;
+        margin-top: 1em;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Start of Nav Media Query */
+    .navbar ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+    }
+
+    .navbar{
+        padding: 2vw
+    }
+
+    .off-screen-menu{
+        height: 100vh;
+        width: 100%;
+        max-width: 640px;
+        position: fixed;
+        top: 0;
+        right: -640px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 50px;
+        transition: right .3 ease-in-out;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.9); 
+    }
+    
+    .off-screen-menu ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .off-screen-menu ul li a{
+        font-size: 30px;
+    }
+
+    .ham-menu{
+        display: block;
+    }
+
+    .on-screen-menu{
+        display: none;
+    }
+    /* End of Nav Media Query */
+
+    /* Start of Search Media Query */
+    .search-container{
+        width: max-content;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-radius: 28px;
+        background: #f6f6f6;
+    }
+    
+    #search-input {
+        font-size: 20px;
+        color: #333333;
+        margin-left: 14px;
+        outline: none;
+        border: none;
+        background: transparent;
+    }
+
+    .search{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* End of Searcg Media Query */
+
+    /* Start of Hero Box Media Query */
+    .hero-box h1{
+        font-size: 25px;
+    }
+
+    .hero-overlay{
+        position: absolute;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-overlay button{
+        max-width: 100px;
+    }
+
+    .hero-box h1{
+        color: white;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        font-size: 25px;
+        white-space: nowrap;
+    }
+    
+    .hero-box button{
+        padding: 1.5vw 2vw;
+        border: none;
+        border-radius: 2px;
+        background-color: rgb(255, 115, 0);
+        color: white;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        cursor: pointer;
+        font-size: 10px;
+        font-weight: bold;
+    }
+    /* End of Hero Box Media Query */
+
+    /* Start of Strip Media Query */
+    #strip{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+
+    /* Start of Dessert Media Query */
+    .dessert{
+        width: 30vw;
+        height: 30vw;
+        margin-top: 1px;
+        margin-bottom: 10px;
+        margin-right: 1px;
+        margin-left: 1px;
+    }
+
+    /* Start of Footer Media Query */
+    footer{
+        background-color: black;
+        padding: 10px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: sticky;
+        margin-top: 50px;
+    }
+
+    footer a{
+        color: rgb(255, 115, 0);
+        text-decoration: none;
+    }
+
+    #footer-contacts{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    footer p{
+        font-size: 10px;
+    }
+    /* End of Footer Media Query */
+
+    .section-header{
+        width: 100%;
+        text-align: center;
+        margin: 1em
+    }
+
+    /* Start of Wing Box Media Query */
+    .wing-box{
+        width: 100%;
+        height: 40vw;
+    }
+
+    #wing-review-box1{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        font-size: 4vw;
+    }
+
+    #wing-review-box2{
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        font-size: 4vw;
+        text-align: center;
+    }
+
+    .wing-reviews-title{
+        font-weight: bold;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 4vw;
+    }
+    /* End of Wing Box Media Query */
+
+    .contents-container{
+        display: flex;
+    }
+
+    .content{
+        width: 100%;
+        height: 60vw;
+        font-size: 2vw;
+    }
+
+    #logo-img {
+        width: 15vw
+    }
+
+    .off-screen-menu ul li a:hover{
+        color: rgb(255, 115, 0);
+    }
+
+    /* Start of Search results Page Media Queries */
+  
+    #search-results-box{
+        margin: 20px;
+        display: flex;
+        gap: 2px;
+        border: 1px solid rgb(231, 231, 231);
+        width: 200px;
+    }
+
+    #search-results-img{
+        width: 50px;
+        height: 50px;
+        margin-left: 5px;
+        margin-top: 10px;
+    }
+
+    #search-results-display{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #search-results-display a{
+        text-decoration: none;
+        color: black;
+    }
+
+    #search-results-display h2{
+        border-bottom: 1px solid rgb(255, 115, 0);
+        font-size: 15px;
+    }
+
+    #search-results-display p{
+        font-size: 8px;
+        margin-top: 5px;
+    }
+
+    #search-results-text-box{
+        margin: 8px;
+    }
+
+    #search-results-emoji-box{
+        display: flex;
+        gap: 5px;
+        color: rgb(72, 72, 72);
+    }
+
+    /* End of Search results Page Media Queries */
+
+    /* Start of Recipe Details Page Media Queries */
+    #recipe-details-emoji-box{
+        display: flex;
+        gap: 5px;
+    }
+    
+    #recipe-details-info-box p{
+        margin-top: 6px;
+        font-size: 10px;
+    }
+    
+    #recipe-details-creator-box{
+        display: flex;
+        gap: 5px;
+    }
+    
+    #recipe-details-creator-box p:nth-of-type(1){
+        color: rgb(255, 115, 0);
+        text-decoration: underline;
+    }
+    /* End of Recipe Details Page Media Queries */
+}
+/* End of 640px Media Query */
+  
+/* Start of 475px Media Query */
 @media (max-width: 475px) {
 
     .container{
@@ -742,15 +1148,6 @@ footer a{
     .hero-overlay button{
         max-width: 100px;
     }
-
-    .ham-menu{
-        display: block;
-    }
-
-    .on-screen-menu{
-        display: none;
-    }
-
 
     #logo-img {
         width: 15vw
@@ -875,10 +1272,12 @@ footer a{
     }
 
 }
-/* End of Extra Small */
+/* Start of 475px Media Query */
 
-/* Start of 2x Extra Small */
+/* Start of 375 Media Query */
 @media (max-width: 375px) {
+
+    /* Start of Hero Box Media Queries*/
     .hero-box h1{
         color: white;
         text-align: center;
@@ -898,6 +1297,7 @@ footer a{
         font-size: 6px;
         font-weight: bold;
     }
+    /* End of Hero Box Media Queries*/
 
     .section-header{
         display: flex;
@@ -905,4 +1305,4 @@ footer a{
         align-items: center;
     }
 }
-/* End of 2x Extra Small */
+/* End of 375 Media Query */
