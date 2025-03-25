@@ -486,6 +486,8 @@ if(window.location.pathname.includes("recipe-details.html")){
 
 // Category Page
 
+// Recipes Page
+
 // Home Page Buttons 
 const wingBoxImg1 = document.getElementById("wing-img-box1");
 wingBoxImg1.addEventListener("click", () => {
