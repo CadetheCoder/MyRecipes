@@ -433,7 +433,7 @@ if(window.location.pathname.includes("recipe-details.html")){
     const urlParams = new URLSearchParams(window.location.search);
     const recipeName = urlParams.get("recipe");
 
-    const recipe = recipes.find( r => r.name.toLowerCase() === recipeName.toLocaleLowerCase());
+    const recipe = recipes.find( r => r.name.toLowerCase() === recipeName.toLowerCase());
     const recipesDetails = document.getElementById("recipe-details-display")
     
     if (recipe) {
@@ -483,6 +483,8 @@ if(window.location.pathname.includes("recipe-details.html")){
         recipes.Display.innerHTML = `<p>Recipe not found.</p>`
     }
 }
+
+// Category Page
 
 // Home Page Buttons 
 const wingBoxImg1 = document.getElementById("wing-img-box1");
