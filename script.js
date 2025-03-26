@@ -488,6 +488,33 @@ if(window.location.pathname.includes("recipe-details.html")){
 
 // Recipes Page
 
+if(window.location.pathname.includes("recipes-page.html")){
+  const recipesPageDisplay = document.getElementById("recipes-page-display");
+
+  recipesPageDisplay.innerHTML = recipes.map(recipe => `
+
+        <a href="/recipe-details.html?recipe=${encodeURIComponent(recipe.name)}">
+                <div id="recipes-page-box">
+                    <img src="${recipe.image}" alt="${recipe.alt}" id="recipes-page-img">
+                    <div id="recipes-page-text-box">
+
+                        <h2>${recipe.name}</h2>
+                        <p>${recipe.stars}</p>
+                        <p>${recipe.desc}</p>
+
+                        <div id="recipes-page-emoji-box">
+
+                            <p>${clock} ${recipe.time}</p>
+                            <p>${kitchenSet} ${recipe.difficulty}</p>
+
+                        </div>
+                    </div>
+                </div>
+            </a>
+      
+    `).join("");
+};
+
 // Home Page Buttons 
 const wingBoxImg1 = document.getElementById("wing-img-box1");
 wingBoxImg1.addEventListener("click", () => {

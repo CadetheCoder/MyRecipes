@@ -504,6 +504,7 @@ footer a{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 40px;
 }
 
 #search-results-display a{
@@ -693,6 +694,55 @@ footer a{
 
 /* Start of Recipes Page */
 
+#recipes-page-display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+#recipes-page-box{
+    margin: 20px;
+    display: flex;
+    gap: 5px;
+    border: 1px solid rgb(231, 231, 231);
+    width: 600px;
+}
+
+#recipes-page-img{
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+#recipes-page-display a{
+    text-decoration: none;
+    color: black;
+}
+
+#recipes-page-display h2{
+    border-bottom: 1px solid rgb(255, 115, 0);
+    font-size: 30px;
+}
+
+#recipes-page-display p{
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#recipes-page-text-box{
+    margin: 8px;
+}
+
+#recipes-page-emoji-box{
+    display: flex;
+    gap: 5px;
+    color: rgb(72, 72, 72);
+}
+
 /* End of Recipes Page */
 
 /* Start of Container */
@@ -860,7 +910,7 @@ footer a{
     }
     /* End of Nav Media Query */
 
-    /* Start of Search Media Query */
+    /* Start of Search Bar Media Query */
     .search-container{
         width: max-content;
         display: flex;
@@ -999,6 +1049,30 @@ footer a{
     }
 
     /* End of Search results Page Media Queries */
+
+    /* Start of Recipes Page Media Queries */
+    #recipes-page-box{
+        margin: 20px;
+        width: 400px;
+    }
+
+    #recipes-page-img{
+        width: 100px;
+        height: 100px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    #recipes-page-display h2{
+        border-bottom: 1px solid rgb(255, 115, 0);
+        font-size: 25px;
+    }
+
+    #recipes-page-display p{
+        font-size: 18px;
+        margin-top: 5px;
+    }
+    /* End of Recipes Page Media Queries */
 
     /* Start of Recipe Details Page Media Queries */
 
