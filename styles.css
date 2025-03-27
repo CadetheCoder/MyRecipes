@@ -500,11 +500,11 @@ footer a{
 }
 
 #search-results-display{
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 40px;
+    height: 100vh;
 }
 
 #search-results-display a{
@@ -618,7 +618,6 @@ footer a{
 #recipe-details-recipe-name{
     font-size: 50px;
 }
-
 /* End of Recipe Details Page */
 
 /* Start of Category Page */
@@ -671,7 +670,7 @@ footer a{
 }
 
 #category-page-box5{
-    background-image: url("https://fhafnb.com/wp-content/uploads/2023/12/Dim-Sum-China.jpg");
+    background-image: url("https://images.deliveryhero.io/image/fd-hk/LH/m29o-listing.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -686,8 +685,52 @@ footer a{
 
 /* Start of Category Details Page */
 
-.category-details-container{
-    height: 100vh;
+#category-details-box{
+    margin: 20px;
+    display: flex;
+    gap: 5px;
+    border: 1px solid rgb(231, 231, 231);
+    width: 600px;
+}
+
+#category-details-img{
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+#category-details-display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+#category-details-display a{
+    text-decoration: none;
+    color: black;
+}
+
+#category-details-display h2{
+    border-bottom: 1px solid rgb(255, 115, 0);
+    font-size: 30px;
+}
+
+#category-details-display p{
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#category-details-text-box{
+    margin: 8px;
+}
+
+#category-details-emoji-box{
+    display: flex;
+    gap: 5px;
+    color: rgb(72, 72, 72);
 }
 
 /* Start of Category Details Page */
@@ -971,7 +1014,7 @@ footer a{
 
     /* Start of Footer Media Query */
     footer{
-        margin-top: 50px;
+        margin-top: 90px;
     }
     /* End of Footer Media Query */
 
@@ -1073,6 +1116,30 @@ footer a{
         margin-top: 5px;
     }
     /* End of Recipes Page Media Queries */
+
+    /* Start of Category Details Media Queries */
+    #category-details-box{
+        margin: 20px;
+        width: 400px;
+    }
+
+    #category-details-img{
+        width: 100px;
+        height: 100px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    #category-details-display h2{
+        border-bottom: 1px solid rgb(255, 115, 0);
+        font-size: 25px;
+    }
+
+    #category-details-display p{
+        font-size: 18px;
+        margin-top: 5px;
+    }
+    /* End of Category Details Media Queries */
 
     /* Start of Recipe Details Page Media Queries */
 
