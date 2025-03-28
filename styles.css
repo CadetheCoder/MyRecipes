@@ -1092,6 +1092,36 @@ footer a{
         align-items: center;
     }
 
+    .display-box{
+        margin: 20px;
+        width: 300px;
+    }
+
+    /* Start of Search Bar Media Query */
+    .search-container{
+        width: max-content;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        border-radius: 28px;
+        background: #f6f6f6;
+    }
+    
+    #search-input {
+        font-size: 20px;
+        color: #333333;
+        margin-left: 14px;
+        outline: none;
+        border: none;
+        background: transparent;
+    }
+
+    .search{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* End of Search Media Query */
+
 }
 /* Start of 475px Media Query */
 
@@ -1125,5 +1155,12 @@ footer a{
         font-size: 13px;
         align-items: center;
     }
+
+    .display-box{
+        margin: 20px;
+        width: 200px;
+    }
+
+    
 }
 /* End of 375 Media Query */
