@@ -926,7 +926,42 @@ const recipes = [
           "Once set, cut into squares and store in a box. Consume within 3 weeks."
         ]
       },
-      
+
+      {
+        name: "Coffee Cake",
+        image: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/coffee-cake-4d37cac.jpg?quality=90&webp=true&resize=440,400", 
+        alt: "A plate of coffee cake.",
+        stars: `${star}${star}${star}${star}${hollowStar} (318)`,
+        difficulty: "easy",
+        serves: "8 slices",
+        time: "50 mins",
+        desc: "Whip up a classic coffee cake with ease. You can freeze the sponges if you want to save time later on. Ideal for a bake sale, birthday party or coffee morning.",
+        creator: "sianie",
+        category: "Dessert",
+        ingredients: [
+          "170g butter or margarine, plus extra for the tins",
+          "170g caster sugar",
+          "3 large eggs",
+          "170g self-raising flour",
+          "1 tbsp instant coffee, dissolved in 1 tbsp hot water (cooled)",
+          "225g icing sugar",
+          "100g butter or margarine",
+          "1½ tbsp instant coffee, dissolved in 1 tbsp hot water",
+          "Strawberry jam (optional)",
+          "Walnuts or cherries (optional, for decoration)"
+        ],
+        instructions: [
+          "Preheat the oven to 180C/160C fan. Grease and line two 18cm sandwich tins.",
+          "Whisk the sugar and butter together until pale and fluffy.",
+          "Gradually add the whisked eggs with a little flour each time, then fold in the remaining flour gently.",
+          "Mix in the dissolved coffee, then divide the mixture between the tins and bake for 25-30 minutes until firm and golden.",
+          "Let the cakes cool in the tins for 5 minutes before transferring to a wire rack to cool completely.",
+          "To make the icing, beat the icing sugar and butter together until smooth, then add the dissolved coffee and mix well.",
+          "Spread half the icing on one sponge, optionally spread strawberry jam on the other, then sandwich them together.",
+          "Spread the remaining icing on top and decorate with walnuts or cherries if desired."
+        ]
+      }
+
   ];  
 
 // Hambugrer Menu
@@ -965,15 +1000,15 @@ if(window.location.pathname.includes("search-results.html")){
         recipesDisplay.innerHTML = mathcingRecipes.map(recipe => `
 
             <a href="/recipe-details.html?recipe=${encodeURIComponent(recipe.name)}">
-                <div id="search-results-box">
-                    <img src="${recipe.image}" alt="${recipe.alt}" id="search-results-img">
-                    <div id="search-results-text-box">
+                <div id="search-results-box" class="display-box">
+                    <img src="${recipe.image}" alt="${recipe.alt}" id="search-results-img" class="display-img">
+                    <div id="search-results-text-box" class="display-text-box">
 
                         <h2>${recipe.name}</h2>
                         <p>${recipe.stars}</p>
                         <p>${recipe.desc}</p>
 
-                        <div id="search-results-emoji-box">
+                        <div id="search-results-emoji-box" class="display-emoji-box">
 
                             <p>${clock} ${recipe.time}</p>
                             <p>${kitchenSet} ${recipe.difficulty}</p>
@@ -1056,15 +1091,15 @@ if(window.location.pathname.includes("category-page.html")){
             const category = box.getAttribute("data-category"); // Get category name
             if (category) {
                 // Redirect to category-details.html with the category as a query parameter
-                window.location.href = `category-details.html?category=${encodeURIComponent(category)}`;
+                window.location.href = `category-results.html?category=${encodeURIComponent(category)}`;
             }
         });
     });
   });
 }
 
-// Category Details Page
-if(window.location.pathname.includes("category-details.html")){
+// Category Results Page
+if(window.location.pathname.includes("category-results.html")){
   const urlParams = new URLSearchParams(window.location.search);
   const category = urlParams.get("category"); // Get category from URL
   
@@ -1076,15 +1111,15 @@ if(window.location.pathname.includes("category-details.html")){
       recipesDisplay.innerHTML = matchingRecipes.map(recipe => `
 
            <a href="/recipe-details.html?recipe=${encodeURIComponent(recipe.name)}">
-                <div id="category-details-box">
-                    <img src="${recipe.image}" alt="${recipe.alt}" id="category-details-img">
-                    <div id="category-details-text-box">
+                <div id="category-details-box" class="display-box">
+                    <img src="${recipe.image}" alt="${recipe.alt}" id="category-details-img" class="display-img">
+                    <div id="category-details-text-box" class="display-text-box">
 
                         <h2>${recipe.name}</h2>
                         <p>${recipe.stars}</p>
                         <p>${recipe.desc}</p>
 
-                        <div id="category-details-emoji-box">
+                        <div id="category-details-emoji-box" class="display-emoji-box">
 
                             <p>${clock} ${recipe.time}</p>
                             <p>${kitchenSet} ${recipe.difficulty}</p>
@@ -1106,15 +1141,15 @@ if(window.location.pathname.includes("recipes-page.html")){
   recipesPageDisplay.innerHTML = recipes.map(recipe => `
 
         <a href="/recipe-details.html?recipe=${encodeURIComponent(recipe.name)}">
-                <div id="recipes-page-box">
-                    <img src="${recipe.image}" alt="${recipe.alt}" id="recipes-page-img">
-                    <div id="recipes-page-text-box">
+                <div id="recipes-page-box" class="display-box">
+                    <img src="${recipe.image}" alt="${recipe.alt}" id="recipes-page-img" class="display-img">
+                    <div id="recipes-page-text-box" class="display-text-box">
 
                         <h2>${recipe.name}</h2>
                         <p>${recipe.stars}</p>
                         <p>${recipe.desc}</p>
 
-                        <div id="recipes-page-emoji-box">
+                        <div id="recipes-page-emoji-box" class="display-emoji-box">
 
                             <p>${clock} ${recipe.time}</p>
                             <p>${kitchenSet} ${recipe.difficulty}</p>
@@ -1187,7 +1222,7 @@ if(window.location.pathname.includes("index.html")){
 
   const heroBtn = document.getElementById("hero-btn");
   heroBtn.addEventListener("click", () => {
-    window.location.href = `http://127.0.0.1:5501/category-details.html?category=Indonesian`;
+    window.location.href = `http://127.0.0.1:5501/category-results.html?category=Indonesian`;
   })
 };
 
