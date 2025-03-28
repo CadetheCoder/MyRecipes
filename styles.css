@@ -453,7 +453,6 @@ footer{
 
 footer a{
     text-decoration: none;
-    padding: 10px;
     color: white;
 }
 
@@ -464,7 +463,7 @@ footer a{
 #footer-contacts{
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
 }
 
 .footer-box{
@@ -477,6 +476,7 @@ footer a{
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
+    gap: 20px
 }
 
 #footer-box-index-page{
@@ -636,6 +636,46 @@ footer a{
 
 /* End of Category Page */
 
+/* Start of Terms Page */
+
+.terms-container{
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+#terms-header{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-bottom: 2px solid rgb(255, 115, 0);
+    max-width: 600px;
+    font-size: clamp(20px, 5vw, 40px);
+}
+
+#terms-display ul{
+    list-style: none;
+}
+
+#terms-display ul li{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#terms-display p{
+    color: rgb(79, 79, 79)
+}
+
+#terms-display a{
+    color: rgb(255, 115, 0);
+}
+
+/* End of Terms Page */
+
 /* Start of Display Class */
 
 .display{
@@ -644,6 +684,7 @@ footer a{
     align-items: center;
     flex-direction: column;
     margin-top: 40px;
+    min-height: 100dvh;
 }
 
 .display-box{
@@ -1016,11 +1057,21 @@ footer a{
 
     /* End of Recipe Details Page Media Queries */
 
+    /* Start of Category Page Media Queries */
     .category-page-box{
         height: 200px;
         width: 400px;
         font-size: 40px;
     }
+    /* End of Category Page Media Queries */
+
+    /* Start of Terms Page */
+
+    .terms-container{
+        max-width: 300px;
+    }
+
+    /* End of Terms Page */
 }
 /* End of 640px Media Query */
   
