@@ -1166,32 +1166,32 @@ if(window.location.pathname.includes("recipes-page.html")){
 if(window.location.pathname.includes("index.html")){
   const wingBoxImg1 = document.getElementById("wing-img-box1");
   wingBoxImg1.addEventListener("click", () => {
-      window.location.href = `http://127.0.0.1:5501/recipe-details.html?recipe=Baked%20Buffalo%20Chicken%20Wings`;
+      window.location.href = `http://127.0.0.1:5500/recipe-details.html?recipe=Baked%20Buffalo%20Chicken%20Wings`;
   });
 
   const wingReviewBox1 = document.getElementById("wing-review-box1");
   wingReviewBox1.addEventListener("click", () => {
-      window.location.href = `http://127.0.0.1:5501/recipe-details.html?recipe=Baked%20Buffalo%20Chicken%20Wings`;
+      window.location.href = `http://127.0.0.1:5500/recipe-details.html?recipe=Baked%20Buffalo%20Chicken%20Wings`;
   });
 
   const wingBoxImg2 = document.getElementById("wing-img-box2");
   wingBoxImg2.addEventListener("click", () => {
-      window.location.href = `http://127.0.0.1:5501/recipe-details.html?recipe=Buffalo%20Cauliflower%20Wings`;
+      window.location.href = `http://127.0.0.1:5500/recipe-details.html?recipe=Buffalo%20Cauliflower%20Wings`;
   });
 
   const wingReviewBox2 = document.getElementById("wing-review-box2");
   wingReviewBox2.addEventListener("click", () => {
-      window.location.href = `http://127.0.0.1:5501/recipe-details.html?recipe=Buffalo%20Cauliflower%20Wings`;
+      window.location.href = `http://127.0.0.1:5500/recipe-details.html?recipe=Buffalo%20Cauliflower%20Wings`;
   });
 
   const content1 = document.getElementById("content1");
   content1.addEventListener("click", () => {
-      window.location.href = `http://127.0.0.1:5501/search-results.html?query=pasta`;
+      window.location.href = `http://127.0.0.1:5500/search-results.html?query=pasta`;
   });
 
   const content2 = document.getElementById("content2");
   content2.addEventListener("click", () => {
-      window.location.href = `http://127.0.0.1:5501/search-results.html?query=steak`;
+      window.location.href = `http://127.0.0.1:5500/search-results.html?query=steak`;
   });
 
   const content3 = document.getElementById("content3");
@@ -1201,28 +1201,28 @@ if(window.location.pathname.includes("index.html")){
 
   const content4 = document.getElementById("content4");
   content4.addEventListener("click", () => {
-      window.location.href = `http://127.0.0.1:5501/search-results.html?query=ramen`;
+      window.location.href = `http://127.0.0.1:5500/search-results.html?query=ramen`;
   });
 
   const dessert1 = document.getElementById("dessert1");
   dessert1.addEventListener("click", () => {
-      window.location.href = `http://127.0.0.1:5501/search-results.html?query=cake`;
+      window.location.href = `http://127.0.0.1:5500/search-results.html?query=cake`;
   });
 
 
   const dessert2 = document.getElementById("dessert2");
   dessert2.addEventListener("click", () => {
-      window.location.href = `http://127.0.0.1:5501/search-results.html?query=cookie`;
+      window.location.href = `http://127.0.0.1:5500/search-results.html?query=cookie`;
   });
 
   const dessert3 = document.getElementById("dessert3");
   dessert3.addEventListener("click", () => {
-      window.location.href = `http://127.0.0.1:5501/search-results.html?query=fudge`;
+      window.location.href = `http://127.0.0.1:5500/search-results.html?query=fudge`;
   });
 
   const heroBtn = document.getElementById("hero-btn");
   heroBtn.addEventListener("click", () => {
-    window.location.href = `http://127.0.0.1:5501/category-results.html?category=Indonesian`;
+    window.location.href = `http://127.0.0.1:5500/category-results.html?category=Indonesian`;
   })
 };
 

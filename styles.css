@@ -672,9 +672,41 @@ footer a{
 
 #terms-display a{
     color: rgb(255, 115, 0);
+    font-weight: bold;
 }
 
 /* End of Terms Page */
+
+/* Start of About Us Page */
+
+#about-us-display{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#about-us-display h1{
+    margin-bottom: 10px;
+    margin-top: 50px;
+    border-bottom: 2px solid rgb(255, 115, 0);
+    max-width: 600px;
+    font-size: clamp(20px, 5vw, 40px);
+}
+
+#about-us-display p{
+    margin-top: 5px;
+    font-size: 20px;
+    color: rgb(79, 79, 79);
+}
+
+#about-us-display strong{
+    color: black
+}
+
+#about-us-display a{
+    color: rgb(255, 115, 0);
+    font-weight: bold;
+}
+/* End of About Us Page */
 
 /* Start of Display Class */
 
@@ -1068,14 +1100,16 @@ footer a{
     /* Start of Terms Page */
 
     .terms-container{
-        max-width: 300px;
+        max-width: 400px;
     }
 
     /* End of Terms Page */
 }
+
 /* End of 640px Media Query */
   
 /* Start of 475px Media Query */
+
 @media (max-width: 475px) {
 
     .container{
@@ -1092,40 +1126,49 @@ footer a{
         align-items: center;
     }
 
+}
+
+/* Start of 475px Media Query */
+
+/* Start of 450px Media Query */
+
+@media (max-width: 450px) {
+
     .display-box{
         margin: 20px;
-        width: 300px;
+        display: flex;
+        gap: 5px;
+        border: 1px solid rgb(231, 231, 231);
+        width: 275px;
+        flex-direction: column;
     }
 
-    /* Start of Search Bar Media Query */
     .search-container{
-        width: max-content;
-        display: flex;
-        align-items: center;
         padding: 5px;
-        border-radius: 28px;
-        background: #f6f6f6;
+        max-width: 200px;
     }
     
     #search-input {
         font-size: 20px;
-        color: #333333;
-        margin-left: 14px;
-        outline: none;
-        border: none;
-        background: transparent;
+        margin-left: 0px;
     }
 
-    .search{
-        margin-left: auto;
-        margin-right: auto;
+    .category-page-box{
+        height: 200px;
+        width: 300px;
+        font-size: 40px;
     }
-    /* End of Search Media Query */
 
+    .terms-container{
+        max-width: 300px;
+    }
+    
 }
-/* Start of 475px Media Query */
+
+/* End of 450px Media Query */
 
 /* Start of 375 Media Query */
+
 @media (max-width: 375px) {
 
     /* Start of Hero Box Media Queries*/
@@ -1156,11 +1199,11 @@ footer a{
         align-items: center;
     }
 
-    .display-box{
-        margin: 20px;
-        width: 200px;
+    .search-container{
+        padding: 5px;
+        max-width: 150px;
     }
-
     
 }
+
 /* End of 375 Media Query */
