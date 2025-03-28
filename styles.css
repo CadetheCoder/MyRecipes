@@ -708,6 +708,86 @@ footer a{
 }
 /* End of About Us Page */
 
+/* Start of Contact Page */
+
+.contact-page-container{
+    min-height: 100dvh;
+}
+
+#contact-page-display{
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+    border-radius: 12px;
+}
+
+#contact-page-display h1{
+    margin-bottom: 10px;
+    border-bottom: 2px solid rgb(255, 115, 0);
+    max-width: 600px;
+    font-size: clamp(20px, 5vw, 40px);
+}
+
+#contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+#contact-form input{
+    height: 30px;
+    font-size: 20px;
+}
+
+.inputs{
+    outline: none;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    transition: 0.3s ease-in-out;
+    padding: 12px;
+}
+
+.inputs:focus{
+    border-color: rgb(255, 115, 0);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1)
+}
+
+#contact-page-display p{
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#contact-form label{
+    font-size: 20px
+}
+
+#contact-form textarea{
+    height: 100px;
+    font-size: 20px;
+    resize: none;
+}
+
+#contact-form button{
+    background-color: rgb(255, 115, 0);
+    border: none;
+    border-radius: 25px;
+    height: 40px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: white;
+}
+
+#contact-form input::placeholder{
+    color: grey;
+}
+
+/* End of Contact Page */
+
 /* Start of Display Class */
 
 .display{
@@ -1104,6 +1184,23 @@ footer a{
     }
 
     /* End of Terms Page */
+
+
+    #about-us-display{
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    #contact-page-display{
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 40px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin-top: 60px;
+        border-radius: 12px;
+    }
 }
 
 /* End of 640px Media Query */
@@ -1162,6 +1259,16 @@ footer a{
     .terms-container{
         max-width: 300px;
     }
+
+    #about-us-display{
+        max-width: 275px;
+        margin: 0 auto;
+    }
+    
+    #contact-page-display{
+        max-width: 300px;
+        padding: 30px;
+    }
     
 }
 
@@ -1203,7 +1310,7 @@ footer a{
         padding: 5px;
         max-width: 150px;
     }
-    
+
 }
 
 /* End of 375 Media Query */
