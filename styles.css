@@ -1168,23 +1168,16 @@ footer a{
     }
 
     /* End of Recipe Details Page Media Queries */
-
-    /* Start of Category Page Media Queries */
+    
     .category-page-box{
         height: 200px;
         width: 400px;
         font-size: 40px;
     }
-    /* End of Category Page Media Queries */
-
-    /* Start of Terms Page */
 
     .terms-container{
         max-width: 400px;
     }
-
-    /* End of Terms Page */
-
 
     #about-us-display{
         max-width: 400px;
@@ -1278,7 +1271,6 @@ footer a{
 
 @media (max-width: 375px) {
 
-    /* Start of Hero Box Media Queries*/
     .hero-box h1{
         color: white;
         text-align: center;
@@ -1298,7 +1290,6 @@ footer a{
         font-size: 6px;
         font-weight: bold;
     }
-    /* End of Hero Box Media Queries*/
 
     .section-header{
         display: flex;
