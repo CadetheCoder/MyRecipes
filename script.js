@@ -968,8 +968,6 @@ const recipes = [
 hamMenu.addEventListener("click", () => {
     hamMenu.classList.toggle("active");
     offScreenMenu.classList.toggle("active");
-
-    
 });
 
 // Form
@@ -990,116 +988,115 @@ searchInput.addEventListener("keydown", e => {
 })
 
 // Search Results Page
-if(window.location.pathname.includes("search-results.html")){
-    const urlParams = new URLSearchParams(window.location.search);
-    const query = urlParams.get("query");
-    const mathcingRecipes = recipes.filter( r => r.name.toLowerCase().includes(query.toLowerCase()));
-    const recipesDisplay = document.getElementById("search-results-display")
-    
-    if (mathcingRecipes.length > 0) {
-        recipesDisplay.innerHTML = mathcingRecipes.map(recipe => `
+if(document.body.classList.contains("search-results-page")){
+  const urlParams = new URLSearchParams(window.location.search);
+  const query = urlParams.get("query");
+  const mathcingRecipes = recipes.filter( r => r.name.toLowerCase().includes(query.toLowerCase()));
+  const recipesDisplay = document.getElementById("search-results-display")
+  
+  if (mathcingRecipes.length > 0) {
+      recipesDisplay.innerHTML = mathcingRecipes.map(recipe => `
 
-            <a href="/recipe-details.html?recipe=${encodeURIComponent(recipe.name)}">
-                <div id="search-results-box" class="display-box">
-                    <img src="${recipe.image}" alt="${recipe.alt}" id="search-results-img" class="display-img">
-                    <div id="search-results-text-box" class="display-text-box">
+          <a href="/recipe-details.html?recipe=${encodeURIComponent(recipe.name)}">
+              <div id="search-results-box" class="display-box">
+                  <img src="${recipe.image}" alt="${recipe.alt}" id="search-results-img" class="display-img">
+                  <div id="search-results-text-box" class="display-text-box">
 
-                        <h2>${recipe.name}</h2>
-                        <p>${recipe.stars}</p>
-                        <p>${recipe.desc}</p>
+                      <h2>${recipe.name}</h2>
+                      <p>${recipe.stars}</p>
+                      <p>${recipe.desc}</p>
 
-                        <div id="search-results-emoji-box" class="display-emoji-box">
+                      <div id="search-results-emoji-box" class="display-emoji-box">
 
-                            <p>${clock} ${recipe.time}</p>
-                            <p>${kitchenSet} ${recipe.difficulty}</p>
+                          <p>${clock} ${recipe.time}</p>
+                          <p>${kitchenSet} ${recipe.difficulty}</p>
 
-                        </div>
-                    </div>
-                </div>
-            </a>`).join("");
+                      </div>
+                  </div>
+              </div>
+          </a>`).join("");
 
-    } else {
-        recipesDisplay.innerHTML = `<p>No recipe found for ${decodeURIComponent(query)}.</p>`
-    }
+  } else {
+      recipesDisplay.innerHTML = `<p>No recipe found for ${decodeURIComponent(query)}.</p>`
+  }
 }
 
 // Recipe Details Page
-if(window.location.pathname.includes("recipe-details.html")){
-    const urlParams = new URLSearchParams(window.location.search);
-    const recipeName = urlParams.get("recipe");
+if(document.body.classList.contains("recipe-details-page")){
+  const urlParams = new URLSearchParams(window.location.search);
+  const recipeName = urlParams.get("recipe");
 
-    const recipe = recipes.find( r => r.name.toLowerCase() === recipeName.toLowerCase());
-    const recipesDetails = document.getElementById("recipe-details-display")
-    
-    if (recipe) {
-        recipesDetails.innerHTML = `
+  const recipe = recipes.find( r => r.name.toLowerCase() === recipeName.toLowerCase());
+  const recipesDetails = document.getElementById("recipe-details-display")
+  
+  if (recipe) {
+      recipesDetails.innerHTML = `
 
-            <h1 id="recipe-details-recipe-name">${recipe.name}</h1>
-            <img src="${recipe.image}" alt="${recipe.alt}" id="recipe-details-img" loading="lazy">
+          <h1 id="recipe-details-recipe-name">${recipe.name}</h1>
+          <img src="${recipe.image}" alt="${recipe.alt}" id="recipe-details-img" loading="lazy">
 
-            <div id="recipe-details-info-box">
+          <div id="recipe-details-info-box">
 
-                <div id="recipe-details-creator-box">
+              <div id="recipe-details-creator-box">
 
-                    <p>${recipe.creator}</p>
-                    <p>${recipe.stars}</p>
+                  <p>${recipe.creator}</p>
+                  <p>${recipe.stars}</p>
 
-                </div>
-        
-                <p id="recipe-details-desc">${recipe.desc}</p>
+              </div>
+      
+              <p id="recipe-details-desc">${recipe.desc}</p>
 
-                 <div id="recipe-details-emoji-box">
+                <div id="recipe-details-emoji-box">
 
-                    <p>${clock} ${recipe.time}</p>
-                    <p>${kitchenSet} ${recipe.difficulty}</p>
-                    <p>${utensils} ${recipe.serves}</p>
+                  <p>${clock} ${recipe.time}</p>
+                  <p>${kitchenSet} ${recipe.difficulty}</p>
+                  <p>${utensils} ${recipe.serves}</p>
 
-                </div>
-               
-            </div>
+              </div>
+              
+          </div>
 
-            <div id="recipe-details-ingredients-container">
+          <div id="recipe-details-ingredients-container">
 
-            <div id="ingredients-box">
-                <h2 id="recipe-details-ingredients-title">Ingredients</h2>
-                <ul>${recipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join("")}</ul>
-            </div>
+          <div id="ingredients-box">
+              <h2 id="recipe-details-ingredients-title">Ingredients</h2>
+              <ul>${recipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join("")}</ul>
+          </div>
 
-            <div id=instructions-box>
-                <h2>Instructions</h2>
-                <ol>${recipe.instructions.map(instruction => `<li>${instruction}</li>`).join("")}</ol>
-            </div>
+          <div id=instructions-box>
+              <h2>Instructions</h2>
+              <ol>${recipe.instructions.map(instruction => `<li>${instruction}</li>`).join("")}</ol>
+          </div>
 
-            </div> 
+          </div> 
 
 
-       `;
-    } else {
-        recipes.Display.innerHTML = `<p>Recipe not found.</p>`
-    }
+      `;
+  } else {
+      recipes.Display.innerHTML = `<p>Recipe not found.</p>`
+  }
 }
 
 // Category Page
-if(window.location.pathname.includes("category-page.html")){
-
+if(document.body.classList.contains("category-page")){
   document.addEventListener("DOMContentLoaded", () => {
-    // Select all category boxes
-    const categoryBoxes = document.querySelectorAll(".category-page-box");
-  
-    categoryBoxes.forEach(box => {
-        box.addEventListener("click", () => {
-            const category = box.getAttribute("data-category"); // Get category name
-            if (category) {
-                // Redirect to category-details.html with the category as a query parameter
-                window.location.href = `category-results.html?category=${encodeURIComponent(category)}`;
-            }
-        });
-    });
+  // Select all category boxes
+  const categoryBoxes = document.querySelectorAll(".category-page-box");
+
+  categoryBoxes.forEach(box => {
+      box.addEventListener("click", () => {
+          const category = box.getAttribute("data-category"); // Get category name
+          if (category) {
+              // Redirect to category-details.html with the category as a query parameter
+              window.location.href = `category-results.html?category=${encodeURIComponent(category)}`;
+          }
+      });
   });
+});
 }
 
 // Category Results Page
-if(window.location.pathname.includes("category-results.html")){
+if(document.body.classList.contains("category-results-page")){
   const urlParams = new URLSearchParams(window.location.search);
   const category = urlParams.get("category"); // Get category from URL
   
@@ -1134,8 +1131,7 @@ if(window.location.pathname.includes("category-results.html")){
 }
 
 // Recipes Page
-if(window.location.pathname.includes("recipes-page.html")){
-
+if(document.body.classList.contains("recipes-page")){
   const recipesPageDisplay = document.getElementById("recipes-page-display");
 
   recipesPageDisplay.innerHTML = recipes.map(recipe => `
@@ -1163,66 +1159,65 @@ if(window.location.pathname.includes("recipes-page.html")){
 };
 
 // Home Page Buttons 
-if(window.location.pathname.includes("index.html")){
+if(document.body.classList.contains("home-page")){
   const wingBoxImg1 = document.getElementById("wing-img-box1");
   wingBoxImg1.addEventListener("click", () => {
-      window.location.href = `http://127.0.0.1:5501/recipe-details.html?recipe=Baked%20Buffalo%20Chicken%20Wings`;
+      window.location.href = `recipe-details.html?recipe=Baked%20Buffalo%20Chicken%20Wings`;
   });
 
   const wingReviewBox1 = document.getElementById("wing-review-box1");
   wingReviewBox1.addEventListener("click", () => {
-      window.location.href = `http://127.0.0.1:5501/recipe-details.html?recipe=Baked%20Buffalo%20Chicken%20Wings`;
+      window.location.href = `recipe-details.html?recipe=Baked%20Buffalo%20Chicken%20Wings`;
   });
 
   const wingBoxImg2 = document.getElementById("wing-img-box2");
   wingBoxImg2.addEventListener("click", () => {
-      window.location.href = `http://127.0.0.1:5501/recipe-details.html?recipe=Buffalo%20Cauliflower%20Wings`;
+      window.location.href = `recipe-details.html?recipe=Buffalo%20Cauliflower%20Wings`;
   });
 
   const wingReviewBox2 = document.getElementById("wing-review-box2");
   wingReviewBox2.addEventListener("click", () => {
-      window.location.href = `http://127.0.0.1:5501/recipe-details.html?recipe=Buffalo%20Cauliflower%20Wings`;
+      window.location.href = `recipe-details.html?recipe=Buffalo%20Cauliflower%20Wings`;
   });
 
   const content1 = document.getElementById("content1");
   content1.addEventListener("click", () => {
-      window.location.href = `http://127.0.0.1:5501/search-results.html?query=pasta`;
+      window.location.href = `search-results.html?query=pasta`;
   });
 
   const content2 = document.getElementById("content2");
   content2.addEventListener("click", () => {
-      window.location.href = `http://127.0.0.1:5501/search-results.html?query=steak`;
+      window.location.href = `search-results.html?query=steak`;
   });
 
   const content3 = document.getElementById("content3");
   content3.addEventListener("click", () => {
-      window.location.href = `http://127.0.0.1:5501/search-results.html?query=taco`;
+      window.location.href = `search-results.html?query=taco`;
   });
 
   const content4 = document.getElementById("content4");
   content4.addEventListener("click", () => {
-      window.location.href = `http://127.0.0.1:5501/search-results.html?query=ramen`;
+      window.location.href = `search-results.html?query=ramen`;
   });
 
   const dessert1 = document.getElementById("dessert1");
   dessert1.addEventListener("click", () => {
-      window.location.href = `http://127.0.0.1:5501/search-results.html?query=cake`;
+      window.location.href = `search-results.html?query=cake`;
   });
 
 
   const dessert2 = document.getElementById("dessert2");
   dessert2.addEventListener("click", () => {
-      window.location.href = `http://127.0.0.1:5501/search-results.html?query=cookies`;
+      window.location.href = `search-results.html?query=cookies`;
   });
 
   const dessert3 = document.getElementById("dessert3");
   dessert3.addEventListener("click", () => {
-      window.location.href = `http://127.0.0.1:5501/search-results.html?query=fudge`;
+      window.location.href = `search-results.html?query=fudge`;
   });
 
   const heroBtn = document.getElementById("hero-btn");
   heroBtn.addEventListener("click", () => {
-    window.location.href = `http://127.0.0.1:5501/category-results.html?category=Indonesian`;
+    window.location.href = `category-results.html?category=Indonesian`;
   })
 };
-
