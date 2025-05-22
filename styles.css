@@ -590,37 +590,37 @@ footer a{
 }
 
 #category-page-box1{
-    background-image: url("https://assets.surlatable.com/m/15a89c2d9c6c1345/72_dpi_webp-REC-283110_Pizza.jpg");
+    background-image: url("images/italian-category.webp");
     background-size: cover;
     background-position: center;
 }
 
 #category-page-box2{
-    background-image: url("https://popmenucloud.com/cdn-cgi/image/width%3D1200%2Cheight%3D1200%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/hjrizxop/85945c8e-b3cb-4545-ae82-d49bfa043cc0.jpg");
+    background-image: url("images/mexican-category.webp");
     background-size: cover;
     background-position: center;
 }
 
 #category-page-box3{
-    background-image: url("https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-1273516682.jpg?c=16x9&q=h_833,w_1480,c_fill");
+    background-image: url("images/american-category.webp");
     background-size: cover;
     background-position: center;
 }
 
 #category-page-box4{
-    background-image: url("https://res.cloudinary.com/rainforest-cruises/images/c_fill,g_auto/f_auto,q_auto/v1622207103/Indonesian-Food-Main/Indonesian-Food-Main.jpg");
+    background-image: url("images/indonesian-category.webp");
     background-size: cover;
     background-position: center;
 }
 
 #category-page-box5{
-    background-image: url("https://images.deliveryhero.io/image/fd-hk/LH/m29o-listing.jpg");
+    background-image: url("images/japanese-category.webp");
     background-size: cover;
     background-position: center;
 }
 
 #category-page-box6{
-    background-image: url("https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL2Rlc3NlcnRzLXVwZGF0ZS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgyOH19fQ==");
+    background-image: url("images/dessert-category.webp");
     background-size: cover;
     background-position: center;
 }
@@ -776,7 +776,7 @@ footer a{
 /* Start of Display Class */
 .display{
     display: flex;
-    justify-content: center;
+    justify-content: top;
     align-items: center;
     flex-direction: column;
     margin-top: 40px;
