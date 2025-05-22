@@ -243,7 +243,6 @@ section{
 }
 
 #wing-img-box1{
-    cursor: pointer;
     grid-area: wing-img-box1;
 }
 
@@ -270,10 +269,6 @@ section{
     margin-bottom: 5px;
     font-size: 25px;
 }
-
-.review-stars{
-    margin-bottom: 10px;
-}
 /* End of Wing Section */
 
 /* Start of Craving Content */
@@ -290,22 +285,6 @@ section{
     align-items: center;
 }
 
-#content1:hover p{
-    display: block;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7)
-}
-
-#content1:hover img{
-    filter: blur(1px);
-}
-
-#content1 img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    position: relative;
-}
-
 #content2{
     grid-area: content2;
     cursor: pointer;
@@ -313,21 +292,6 @@ section{
     position: relative;
     justify-content: center;
     align-items: center;
-}
-
-#content2:hover p{
-    display: block;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7)
-}
-
-#content2:hover img{
-    filter: blur(1px);
-}
-
-#content2 img{
-    width: 100%;
-    object-fit: cover;
-    height: 100%;
 }
 
 #content3{
@@ -339,21 +303,6 @@ section{
     align-items: center;
 }
 
-#content3:hover p{
-    display: block;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7)
-}
-
-#content3:hover img{
-    filter: blur(1px);
-}
-
-#content3 img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
 #content4{
     grid-area: content4;
     display: flex;
@@ -362,24 +311,14 @@ section{
     align-items: center;
 }
 
-#content4:hover p{
-    display: block;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-#content4:hover img{
-    filter: blur(1px);
-}
-
-#content4 img{
+.content img{
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-.content{
-    display: block;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+.content:hover img{
+    filter: blur(1px);
 }
 
 .content-text{
@@ -388,6 +327,11 @@ section{
     color: white;
     font-weight: bold;
     font-size: 25px;
+}
+
+.content:hover .content-text{
+    display: block;
+    text-shadow:1px 1px 2px rgba(0,0,0,0.3), 0 2px 4px rgba(0,0,0,0.4);
 }
 /* End of Craving Content */
 
@@ -437,7 +381,7 @@ section{
 }
 
 .dessert:hover {
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1), 0 8px 16px rgba(0,0,0,0.2);
 }
 /* End of Desserts */
 
@@ -941,6 +885,22 @@ footer a{
         justify-content: center;
         flex-direction: column;
         align-items: center;
+    }
+
+    .content img{
+        filter: blur(1px);
+    }
+
+    .content-text{
+        position: absolute;
+        display: block;
+        color: white;
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    .content .content-text{
+        text-shadow:1px 1px 2px rgba(0,0,0,0.3), 0 2px 4px rgba(0,0,0,0.4);
     }
 
     /* Start of Nav Media Query */
