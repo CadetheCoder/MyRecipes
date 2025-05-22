@@ -11,7 +11,7 @@ const hollowStar = `<i class="fa-regular fa-star" style="color: #FFD43B;"></i>`
 const recipes = [
     {
       name: "Nasi Goreng",
-      image: "images/Nasi Goreng recipe img.jpg",
+      image: "images/nasi-goreng-recipe.webp",
       alt: "A bowl of Indonesian fried rice.",
       stars: `${star}${star}${star}${star}${star} (31)`,
       difficulty: "easy",
