@@ -33,7 +33,6 @@ section{
 .contents-container{
     display: contents;
 }
-
 /* End of Everything Selectors */
 
 /* Search Bar */
@@ -167,11 +166,9 @@ section{
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
 }
-
 /* End Of Nav */
 
 /* Start Of Hero */
-
 #hero-header{
     grid-area: hero-header;
 }
@@ -229,7 +226,6 @@ section{
 /* End of Hero */
 
 /* Start of Wing Section */
-
 #wing-header{
     grid-area: wing-header;
 }
@@ -281,7 +277,6 @@ section{
 /* End of Wing Section */
 
 /* Start of Craving Content */
-
 #content-header{
     grid-area: content-header;
 }
@@ -482,11 +477,9 @@ footer a{
 #footer-box-index-page{
     margin-top: 70px;
 }
-
 /* End of Footer */
 
 /* Start of Recipe Details Page */
-
 .recipe-details-container {
     max-width: 500px;  
     display: flex;
@@ -569,11 +562,9 @@ footer a{
 #recipe-details-recipe-name{
     font-size: 50px;
 }
-
 /* End of Recipe Details Page */
 
 /* Start of Category Page */
-
 .category-page-container{
     height: 100vh;
     display: flex;
@@ -633,11 +624,9 @@ footer a{
     background-size: cover;
     background-position: center;
 }
-
 /* End of Category Page */
 
 /* Start of Terms Page */
-
 .terms-container{
     max-width: 600px;
     display: flex;
@@ -674,11 +663,9 @@ footer a{
     color: rgb(255, 115, 0);
     font-weight: bold;
 }
-
 /* End of Terms Page */
 
 /* Start of About Us Page */
-
 #about-us-display{
     max-width: 500px;
     margin: 0 auto;
@@ -709,7 +696,6 @@ footer a{
 /* End of About Us Page */
 
 /* Start of Contact Page */
-
 .contact-page-container{
     min-height: 100dvh;
 }
@@ -785,11 +771,9 @@ footer a{
 #contact-form input::placeholder{
     color: grey;
 }
-
 /* End of Contact Page */
 
 /* Start of Display Class */
-
 .display{
     display: flex;
     justify-content: center;
@@ -839,7 +823,6 @@ footer a{
     gap: 5px;
     color: rgb(72, 72, 72);
 }
-
 /* End of Display Class */
 
 /* Start of Container */
@@ -1148,11 +1131,9 @@ footer a{
         font-size: 18px;
         margin-top: 5px;
     }
-
     /* End of Display Class Media Queries */
 
     /* Start of Recipe Details Page Media Queries */
-
     .recipe-details-container {
         max-width: 400px;  
         display: flex;
@@ -1166,9 +1147,7 @@ footer a{
     #recipe-details-recipe-name{
         font-size: 35px;
     }
-
     /* End of Recipe Details Page Media Queries */
-    
     .category-page-box{
         height: 200px;
         width: 400px;
@@ -1195,11 +1174,9 @@ footer a{
         border-radius: 12px;
     }
 }
-
 /* End of 640px Media Query */
   
 /* Start of 475px Media Query */
-
 @media (max-width: 475px) {
 
     .container{
@@ -1217,11 +1194,9 @@ footer a{
     }
 
 }
-
 /* Start of 475px Media Query */
 
 /* Start of 450px Media Query */
-
 @media (max-width: 450px) {
 
     .display-box{
@@ -1264,11 +1239,9 @@ footer a{
     }
     
 }
-
 /* End of 450px Media Query */
 
 /* Start of 375 Media Query */
-
 @media (max-width: 375px) {
 
     .hero-box h1{
@@ -1303,5 +1276,4 @@ footer a{
     }
 
 }
-
 /* End of 375 Media Query */
